@@ -1,22 +1,50 @@
 'use client';
-
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Transition } from '@headlessui/react';
 import { HiOutlineXMark, HiBars3 } from 'react-icons/hi2';
 import { FaFingerprint } from 'react-icons/fa';
-
 import Container from './Container';
 import { siteDetails } from '@/data/siteDetails';
 import { menuItems } from '@/data/menuItems';
 
+
 const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
-
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
+    const [activeSection, setActiveSection] = useState("")
+    const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY + 100; // Small offset for better accuracy
 
+            menuItems.forEach((item, index) => {
+                const section = document.querySelector(item.url);
+                if (section) {
+                    const sectionTop = (section as HTMLElement).offsetTop;
+                    const sectionBottom = sectionTop + (section as HTMLElement).offsetHeight;
+
+                    // Special case for the first section
+                    if (index === 0 && scrollPosition < sectionBottom) {
+                        setActiveSection(item.url);
+                    }
+                    // Regular case for other sections
+                    else if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                        setActiveSection(item.url);
+                    }
+                }
+            });
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        handleScroll(); // Call once to set active section on load
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    // console.log(pathname);
     return (
         <header className="bg-transparent fixed top-0 left-0 right-0 md:absolute z-50 mx-auto w-full">
             <Container className="!px-0">
@@ -29,21 +57,7 @@ const Header: React.FC = () => {
                         </span>
                     </Link>
 
-                    {/* Desktop Menu */}
-                    <ul className="hidden md:flex space-x-6">
-                        {menuItems.map(item => (
-                            <li key={item.text}>
-                                <Link href={item.url} className="text-foreground hover:text-foreground-accent transition-colors">
-                                    {item.text}
-                                </Link>
-                            </li>
-                        ))}
-                        <li>
-                            <Link href="#cta" className="text-black bg-primary hover:bg-primary-accent px-8 py-3 rounded-full transition-colors">
-                                Download
-                            </Link>
-                        </li>
-                    </ul>
+
 
                     {/* Mobile Menu Button */}
                     <div className="md:hidden flex items-center">
@@ -63,6 +77,31 @@ const Header: React.FC = () => {
                         </button>
                     </div>
                 </nav>
+
+                {/* Desktop Menu */}
+                <ul className="hidden md:flex fixed items-center text-center top-1/2 right-4 -translate-y-1/2 flex-col space-y-10 p-4">
+                    {menuItems.map((item) => (
+                        <li key={item.text} className="flex items-center justify-between w-full relative"> {/* Added relative for positioning */}
+                            {/* Clickable Circle */}
+                            <span
+                                className={`w-8 h-8 my-6 rounded-full transition-colors self-center ml-1 cursor-pointer ${activeSection === item.url ? "bg-primary" : "bg-gray-300"}`}
+                                onClick={() => window.location.href = item.url} // Navigate to the URL on click
+                                onMouseEnter={() => setHoveredItem(item.text)} // Set the hovered item (use item.text for comparison)
+                                onMouseLeave={() => setHoveredItem(null)} // Reset the hovered item
+                            >
+                                {/* Hover element */}
+                                {hoveredItem === item.text && (
+                                    <ul className="absolute left-0 top-0 transform translate-x-[-100%] transition-all duration-200">
+                                        <li className="text-white w-full bg-primary px-6 py-3 rounded-full transition-colors whitespace-nowrap">
+                                            {item.text}
+                                        </li>
+                                    </ul>
+                                )}
+                            </span>
+                        </li>
+                    ))}
+                </ul>
+
             </Container>
 
             {/* Mobile Menu with Transition */}

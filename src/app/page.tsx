@@ -12,14 +12,20 @@ import CTA from "@/components/CTA";
 const HomePage: React.FC = () => {
   return (
     <>
-      <Hero />
+      <Section
+        id="home"
+        title=""
+        description=""
+      >
+        <Hero />
+      </Section>
+
       <Logos />
       <Container>
         <Benefits />
-
         <Section
-          id="pricing"
-          title="Pricing"
+          id="about"
+          title="About"
           description="Simple, transparent pricing. No surprises."
         >
           <Pricing />
@@ -36,8 +42,14 @@ const HomePage: React.FC = () => {
         <FAQ />
 
         <Stats />
+        <Section
+          id="#cta"
+          title=""
+          description=""
+        >
+          <CTA />
+        </Section>
 
-        <CTA />
       </Container>
     </>
   );
