@@ -7,6 +7,7 @@ import { FaFingerprint } from 'react-icons/fa';
 import Container from './Container';
 import { siteDetails } from '@/data/siteDetails';
 import { menuItems } from '@/data/menuItems';
+import { Logo } from './logo';
 
 
 const Header: React.FC = () => {
@@ -50,12 +51,12 @@ const Header: React.FC = () => {
             <Container className="!px-0">
                 <nav className="shadow-md md:shadow-none bg-white md:bg-transparent mx-auto flex justify-between items-center py-2 px-5 md:py-10">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-2">
-                        <FaFingerprint className="text-foreground min-w-fit w-7 h-7" />
+                    <span className="flex items-center">
+                        <Logo />
                         <span className="manrope text-xl font-semibold text-foreground cursor-pointer backdrop-blur-[2px] bg-gradient-to-b">
                             {siteDetails.siteName}
                         </span>
-                    </Link>
+                    </span>
 
 
 
