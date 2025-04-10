@@ -7,7 +7,7 @@ import { Logo } from './logo';
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-hero-background text-foreground py-10">
+        <footer className="bg-hero-background text-foreground py-10 bg-gray100 dark:bg-gray-700">
             <div className="max-w-7xl w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div>
                     <span className="flex items-center gap-2">
