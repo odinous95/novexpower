@@ -85,7 +85,7 @@ const Header: React.FC = () => {
                     {/* Desktop Menu */}
                     <ul className="hidden md:flex fixed items-center text-center top-1/2 right-4 -translate-y-1/2 flex-col space-y-10 p-4">
 
-                        {menuItems.map((item) => (
+                        {menuItems && menuItems.map((item) => (
                             <li key={item.text} className="flex items-center justify-between w-full relative"> {/* Added relative for positioning */}
                                 {/* Clickable Circle */}
                                 <span
