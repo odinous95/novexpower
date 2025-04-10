@@ -1,4 +1,4 @@
-import { ctaDetails } from "@/data/cta"
+// import { ctaDetails } from "@/data/cta"
 import Image from "next/image"
 
 // import AppStoreButton from "./AppStoreButton"
