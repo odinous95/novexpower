@@ -3,7 +3,7 @@ import { siteDetails } from "./siteDetails";
 
 export const testimonials: ITestimonial[] = [
   {
-    name: "John Smith",
+    name: "Yaman Deif",
     role: "CEO at Company",
     message: `${siteDetails.siteName}'s AI-driven insights have transformed how we approach financial planning for our clients. It's an invaluable resource in the modern financial landscape.`,
     avatar: "/images/testimonial-1.webp",
