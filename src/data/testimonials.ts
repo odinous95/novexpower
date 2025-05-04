@@ -1,5 +1,4 @@
 import { ITestimonial } from "@/components/types";
-import { siteDetails } from "./siteDetails";
 
 export const testimonials: ITestimonial[] = [
  {
