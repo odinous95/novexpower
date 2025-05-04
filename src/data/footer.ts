@@ -8,29 +8,29 @@ export const footerDetails: {
   socials: ISocials;
 } = {
   subheading:
-    "Empowering businesses with cutting-edge financial technology solutions.",
+    "Empowering businesses with cutting-edge battery technology.",
   quickLinks: [
+    //{
+    //  text: "Features",
+    //  url: "#features",
+    //},
+    //{
+     // text: "Pricing",
+     // url: "#pricing",
+    //},
     {
-      text: "Features",
-      url: "#features",
-    },
-    {
-      text: "Pricing",
-      url: "#pricing",
-    },
-    {
-      text: "Testimonials",
+      text: "The Team",
       url: "#testimonials",
     },
   ],
   email: "info@novexpower",
-  telephone: "+1 (123) 456-7890",
+  telephone: "+46 764143259",
   socials: {
-    twitter: "https://twitter.com/Twitter",
-    facebook: "https://facebook.com",
+    //twitter: "https://twitter.com/Twitter",
+    //facebook: "https://facebook.com",
     // youtube: 'https://youtube.com',
-    linkedin: "https://www.linkedin.com",
+    linkedin: "https://www.linkedin.com/company/novexpower",
     // threads: 'https://www.threads.net',
-    instagram: "https://www.instagram.com",
+    //instagram: "https://www.instagram.com",
   },
 };

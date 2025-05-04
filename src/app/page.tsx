@@ -34,7 +34,7 @@ const HomePage: React.FC = () => {
         <Section
           id="testimonials"
           title="Our Team"
-          description="Hear from those who have partnered with us."
+          description="A glimpse of our team roles and backgrounds."
         >
           <Testimonials />
         </Section>
