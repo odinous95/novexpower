@@ -23,7 +23,7 @@ const Testimonials: React.FC = () => {
                             <p className="text-sm text-foreground-accent">{testimonial.role}</p>
                         </div>
                     </div>
-                    <p className="text-foreground-accent text-center lg:text-left">&quot;{testimonial.message}&quot;</p>
+                    <p className="text-foreground-accent text-center lg:text-left">{testimonial.message}</p>
                 </div>
             ))}
         </div>
