@@ -3,28 +3,18 @@ import { siteDetails } from "./siteDetails";
 
 export const faqs: IFAQ[] = [
   {
-    question: `Is ${siteDetails.siteName} secure?`,
+    question: `Why ${siteDetails.siteName} ?`,
     answer:
-      "Absolutely. We use bank-level encryption to protect your data and never store your login information. Plus, our biometric authentication adds an extra layer of security.",
+      "We build modular battery packs that fit any form or shape, ditching the generic boxy designs that dominate now. Our immersion-cooled architecture enables faster charging and discharging while acting as a built-in fire suppressant; if a cell fails, heat will not spread to its neighbors, boosting safety. Customers can order online, from a single to 100s of units, by sketching the space and electrical requirements. Our AI-powered design-engine instantly configures, optimizes, and prices a bespoke pack with lead-time.",
   },
   {
-    question: `Can I use ${siteDetails.siteName} on multiple devices?`,
+    question: `What makes ${siteDetails.siteName} battery pack unique?`,
     answer:
-      "Absolutely! Your Finwise account syncs seamlessly across all your devices - smartphone, tablet, and computer.",
+      "We meet our customer’s need for battery packs that fit their design requirements: to deliver a pack that fits the 			space they have available and not just a generic box. Our innovative production concept also allows rapid delivery, safety and high-performance, while still keeping costs under control. Partnering with an Asian supplier early in the electrification journey is hard. This allows us to build a long-term supplier relationship as their trusted battery pack supplier. The pack must fit the customer's technical requirements, budget, and schedule over their entire product development process.",
   },
   {
-    question: "Can I connect all my bank accounts?",
-    answer: `Yes! ${siteDetails.siteName} supports connections with over 10,000 financial institutions worldwide. Simply log in through our secure portal to link your accounts.`,
-  },
-  {
-    question:
-      "Do I need any financial expertise to use the investing features?",
-    answer:
-      "Not at all! Our expert-curated portfolios and educational resources make investing accessible to everyone, regardless of experience level.",
-  },
-  {
-    question: "What if I need help using the app?",
-    answer:
-      "Our dedicated support team is available 24/7 via chat or email. Plus, we offer extensive in-app tutorials and a comprehensive knowledge base to help you make the most of Finwise.",
+    question: "How does Novex build it’s battery packs?",
+    answer: `It is a secret!`,
   },
 ];
+
