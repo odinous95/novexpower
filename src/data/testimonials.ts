@@ -5,7 +5,7 @@ export const testimonials: ITestimonial[] = [
     name: "Yaman Deif",
     role: "Mechatronics & Design",
     message: `M.Sc. Engineering Design, Mechatronicsn.\nExpert in robotics, system integration, manufacturing automation.`,
-    avatar: "/images/testimonial-1.webp",
+    avatar: "/images/Yaman.png",
   },
   {
     name: "David Lloyd",
