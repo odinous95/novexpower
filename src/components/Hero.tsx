@@ -12,8 +12,12 @@ const Hero: React.FC = () => {
             id="hero"
             className="relative flex items-center justify-center pb-0 pt-32 md:pt-40 px-5"
         >
-            <div className="absolute left-0 top-0 bottom-0 -z-10 w-full ">
-                <div className="absolute inset-0 h-full w-6/12 bg-hero-background bg-[linear-gradient(to_left,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#069670_2px,transparent_1px)] bg-[size:40px_30px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_100%,#000_60%,transparent_100%)]">
+            <div className="absolute left-0 top-0 bottom-0 -z-10 w-6/12">
+                <div className="absolute inset-0 h-full bg-hero-background bg-[linear-gradient(to_left,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#069670_2px,transparent_1px)] bg-[size:40px_30px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_100%,#000_60%,transparent_100%)]">
+                </div>
+            </div>
+            <div className="absolute right-0 top-0 bottom-0 -z-20 w-6/12">
+                <div className="absolute inset-0 h-full bg-hero-background bg-[linear-gradient(to_left,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#069670_2px,transparent_1px)] bg-[size:40px_30px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_100%,#000_60%,transparent_100%)]">
                 </div>
             </div>
 
@@ -39,6 +43,8 @@ const Hero: React.FC = () => {
                     className='relative mt-12 md:mt-16 mx-auto z-10'
                 />
             </div>
+
+
         </section>
     );
 };

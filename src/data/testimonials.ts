@@ -1,23 +1,22 @@
 import { ITestimonial } from "@/components/types";
-import { siteDetails } from "./siteDetails";
 
 export const testimonials: ITestimonial[] = [
-  {
+ {
     name: "Yaman Deif",
-    role: "CEO at Company",
-    message: `${siteDetails.siteName}'s AI-driven insights have transformed how we approach financial planning for our clients. It's an invaluable resource in the modern financial landscape.`,
+    role: "Mechatronics & Design",
+    message: `M.Sc. Engineering Design, Mechatronicsn.\nExpert in robotics, system integration, manufacturing automation.`,
     avatar: "/images/testimonial-1.webp",
   },
   {
-    name: "Jane Doe",
-    role: "CTO at Startup",
-    message: `As a CTO, I'm impressed by ${siteDetails.siteName}'s robust security measures and seamless integrations. It's rare to find an app that balances user-friendliness with such advanced technology.`,
-    avatar: "/images/testimonial-2.webp",
+    name: "David Lloyd",
+    role: "Battery Engineering & Chemistry",
+    message: `MSc Chemical Engineering. DSc Electrochemistry and energy storage. Worked at NorthVolt, more than two battery startups`,
+    avatar: "/images/David.jpg",
   },
   {
-    name: "Emily Johnson",
-    role: "Product Manager",
-    message: `${siteDetails.siteName} is revolutionizing personal finance management. Its intuitive design and powerful features make it an indispensable tool for anyone serious about financial growth.`,
-    avatar: "/images/testimonial-3.webp",
+    name: "Matt Davoudi",
+    role: "Business & Partnerships",
+    message: `MSc Transport Engineering. PhD Sustainable Urban Mobility (KTH). 7+ years in transport systems and innovation`,
+    avatar: "/images/Matt.jpg",
   },
 ];
