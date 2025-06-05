@@ -11,7 +11,7 @@ export const testimonials: ITestimonial[] = [
     name: "David Lloyd",
     role: "Battery Engineering & Chemistry",
     message: `MSc Chemical Engineering. DSc Electrochemistry and energy storage. Worked at NorthVolt, more than two battery startups`,
-    avatar: "/images/David.jpg",
+    avatar: "/images/David.jpeg",
   },
   {
     name: "Matt Davoudi",
