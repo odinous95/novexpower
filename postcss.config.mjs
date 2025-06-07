@@ -6,5 +6,3 @@ const config = {
 };
 
 export default config;
-
-<h1 className="hero-title">{heroDetails.heading}</h1>
