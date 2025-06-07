@@ -20,7 +20,7 @@ export function Logo() {
                 className="block dark:hidden cursor-pointer w-auto h-auto"
                 height="70"
                 width="70"
-                sizes="70px"
+                sizes="90px"
                 src="/images/logo-light.png"
             />
 

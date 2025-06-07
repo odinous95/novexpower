@@ -25,7 +25,9 @@ const Hero: React.FC = () => {
             </div> */}
 
             <div className="text-center">
-                <h1 className="backdrop-blur-[2px] bg-gradient-to-b text-4xl md:text-6xl md:leading-tight font-bold text-foreground max-w-lg md:max-w-2xl mx-auto">{heroDetails.heading}</h1>
+                <h1 className="whitespace-nowrap backdrop-blur-[2px] bg-gradient-to-b text-3xl md:text-5xl md:leading-tight font-bold text-foreground mx-auto hero-title">
+                    {heroDetails.heading}
+                </h1>
                 <p className="mt-4 text-foreground max-w-lg mx-auto backdrop-blur-[2px] bg-gradient-to-b">{heroDetails.subheading}</p>
                 {/* <div className="mt-6 flex flex-col sm:flex-row items-center sm:gap-4 w-fit mx-auto">
                     <AppStoreButton dark />

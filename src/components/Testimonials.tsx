@@ -14,8 +14,8 @@ const Testimonials: React.FC = () => {
                         <Image
                             src={testimonial.avatar}
                             alt={`${testimonial.name} avatar`}
-                            width={50}
-                            height={50}
+                            width={80}
+                            height={80}
                             className="rounded-full shadow-md"
                         />
                         <div className="ml-4">
@@ -23,7 +23,7 @@ const Testimonials: React.FC = () => {
                             <p className="text-sm text-foreground-accent">{testimonial.role}</p>
                         </div>
                     </div>
-                    <p className="text-foreground-accent text-center lg:text-left">&quot;{testimonial.message}&quot;</p>
+                    <p className="text-foreground-accent text-center lg:text-left">{testimonial.message}</p>
                 </div>
             ))}
         </div>
