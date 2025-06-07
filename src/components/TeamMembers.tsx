@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { team_members } from '@/data/team_members';
-import LineSep from './LineSep';
 
 const Team: React.FC = () => {
     return (
