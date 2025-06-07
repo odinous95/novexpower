@@ -53,7 +53,7 @@ const Header: React.FC = () => {
                     {/* Logo */}
                     <span className="flex items-center">
                         <Logo />
-                        <span className="manrope text-xl font-semibold text-foreground cursor-pointer backdrop-blur-[2px] bg-gradient-to-b">
+                        <span className="manrope text-xl font-semibold text-foreground cursor-pointer backdrop-blur-[2px] bg-gradient-to-b ml-2">
                             {siteDetails.siteName}
                         </span>
                     </span>

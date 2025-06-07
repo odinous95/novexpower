@@ -1,5 +1,5 @@
 export const heroDetails = {
-  heading: "Innovative Batteries!",
-  subheading: "Powering the Future with Cutting-Edge Energy Solutions!",
+  heading: "​​Design the Shape, We Power It.",
+  subheading: "Shaping the Future with Cutting-edge Battery Packs",
   centerImageSrc: "/images/hero-mockup.webp",
 };
