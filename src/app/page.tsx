@@ -1,13 +1,11 @@
 import Hero from "@/components/Hero";
-import Testimonials from "@/components/Testimonials";
-// import Pricing from "@/components/Pricing/Pricing";
 import FAQ from "@/components/FAQ";
-// import Logos from "@/components/Logos";
-// import Benefits from "@/components/Benefits/Benefits";
 import Container from "@/components/Container";
 import Section from "@/components/Section";
-// import Stats from "@/components/Stats";
-// import CTA from "@/components/CTA";
+import Team from "@/components/TeamMembers";
+import Collaboration from "@/components/Collaborations";
+import LineSep from "@/components/LineSep";
+
 
 const HomePage: React.FC = () => {
   return (
@@ -19,37 +17,24 @@ const HomePage: React.FC = () => {
       >
         <Hero />
       </Section>
-
-      {/* <Logos /> */}
       <Container>
-        {/* <Benefits /> */}
-        {/* <Section
-          id="about"
-          title="About"
-          description="Simple, transparent pricing. No surprises."
-        >
-          <Pricing />
-        </Section> */}
-
         <Section
-          id="testimonials"
+          id="team"
           title="Our Team"
           description="A glimpse of our team roles and backgrounds."
         >
-          <Testimonials />
+          <Team />
+          <LineSep />
         </Section>
-
-        <FAQ />
-
-        {/* <Stats /> */}
-        {/* <Section
-          id="#cta"
-          title=""
-          description=""
+        <Section
+          id="Collaborations"
+          title="Collaborations"
+          description="We are proud to collaborate with these amazing teams and organizations."
         >
-          <CTA />
-        </Section> */}
-
+          <Collaboration />
+          <LineSep />
+        </Section>
+        <FAQ />
       </Container>
     </>
   );

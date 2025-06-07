@@ -27,7 +27,7 @@ export interface IFAQ {
   answer: string;
 }
 
-export interface ITestimonial {
+export interface Iteam_members {
   name: string;
   role: string;
   message: string;

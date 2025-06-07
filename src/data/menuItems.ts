@@ -15,7 +15,7 @@ export const menuItems: IMenuItem[] = [
   // },
   {
     text: "The Team",
-    url: "#testimonials",
+    url: "#team",
   },
   // {
   //   text: "Reach Out",

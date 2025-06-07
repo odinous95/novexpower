@@ -1,7 +1,7 @@
-import { ITestimonial } from "@/components/types";
+import { Iteam_members } from "@/components/types";
 
-export const testimonials: ITestimonial[] = [
- {
+export const team_members: Iteam_members[] = [
+  {
     name: "Yaman Deif",
     role: "Mechatronics & Design",
     message: `M.Sc. Engineering Design, Mechatronicsn.\nExpert in robotics, system integration, manufacturing automation.`,
