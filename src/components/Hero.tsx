@@ -24,26 +24,30 @@ const Hero: React.FC = () => {
             {/* <div className="absolute left-0 right-0 bottom-0 backdrop-blur-[2px] h-20 bg-gradient-to-b from-transparent via-[rgba(249,255,233,0.5)] to-[rgba(202,230,228,0.5)]">
             </div> */}
 
-            <div className="text-center">
-                <h1 className="whitespace-nowrap backdrop-blur-[2px] bg-gradient-to-b text-3xl md:text-5xl md:leading-tight font-bold text-foreground mx-auto hero-title">
+            <div className="w-full max-w-xl mx-auto text-center px-2">
+                <h1 className="whitespace-normal md:whitespace-nowrap backdrop-blur-[2px] bg-gradient-to-b text-2xl sm:text-3xl md:text-5xl md:leading-tight font-bold text-foreground mx-auto hero-title">
                     {heroDetails.heading}
                 </h1>
-                <p className="mt-4 text-foreground max-w-lg mx-auto backdrop-blur-[2px] bg-gradient-to-b">{heroDetails.subheading}</p>
+                <p className="mt-3 sm:mt-4 text-foreground max-w-md mx-auto text-base sm:text-lg backdrop-blur-[2px] bg-gradient-to-b">
+                    {heroDetails.subheading}
+                </p>
                 {/* <div className="mt-6 flex flex-col sm:flex-row items-center sm:gap-4 w-fit mx-auto">
                     <AppStoreButton dark />
                     <PlayStoreButton dark />
                 </div> */}
-                <Image
-                    src={heroDetails.centerImageSrc}
-                    width={384}
-                    height={340}
-                    quality={100}
-                    sizes="(max-width: 768px) 100vw, 384px"
-                    priority={true}
-                    unoptimized={true}
-                    alt="app mockup"
-                    className='relative mt-12 md:mt-16 mx-auto z-10'
-                />
+                <div className="relative mt-8 md:mt-16 flex justify-center">
+                    <Image
+                        src={heroDetails.centerImageSrc}
+                        width={320}
+                        height={284}
+                        quality={100}
+                        sizes="(max-width: 640px) 90vw, (max-width: 768px) 70vw, 384px"
+                        priority={true}
+                        unoptimized={true}
+                        alt="app mockup"
+                        className="mx-auto z-10 w-full max-w-xs sm:max-w-sm md:max-w-md h-auto"
+                    />
+                </div>
             </div>
 
 
