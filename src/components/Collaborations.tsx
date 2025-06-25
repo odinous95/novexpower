@@ -29,7 +29,7 @@ const Collaboration: React.FC = () => {
                         rel="noopener noreferrer"
                         className="group"
                     >
-                        <div className="bg-gray-400 dark:bg-gray-400 rounded-xl p-4 shadow-sm group-hover:shadow-md transition">
+                        <div className="bg-gray-400 dark:bg-gray-400 rounded-xl p-2 shadow-sm group-hover:shadow-md transition">
                             <Image
                                 src={collab.logo}
                                 alt={`${collab.name} logo`}
