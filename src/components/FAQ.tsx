@@ -21,14 +21,24 @@ const FAQ: React.FC = () => {
                 </div>
 
                 <div className="w-full lg:max-w-2xl mx-auto">
-                    {faqs.map((faq, index) => (
+                    {faqs && faqs.map((faq, index) => (
                         <div key={index} className="mb-7">
                             <Disclosure>
                                 {({ open }) => (
                                     <span>
-                                        <DisclosureButton className="flex items-center justify-between w-full px-4 pt-7 text-lg text-left">
+                                        <DisclosureButton className="flex items-center justify-between w-full px-4 pt text-lg text-left">
                                             <span className="text-2xl font-semibold">{faq.question}</span>
-                                            {open ? <BiMinus className="w-5 h-5 text-secondary" /> : <BiPlus className="w-5 h-5 text-secondary" />}
+                                            <div
+                                                className={`w-6 h-6 my-2 rounded-full transition-colors self-center ml-1 cursor-pointer ${open ? "bg-primary" : "bg-gray-300"}`}
+                                            >
+                                                <span className="w-full h-full flex items-center justify-center">
+                                                    {open ? (
+                                                        <BiMinus className="w-5 h-5 text-white" aria-hidden="true" />
+                                                    ) : (
+                                                        <BiPlus className="w-5 h-5 text-gray-700" aria-hidden="true" />
+                                                    )}
+                                                </span>
+                                            </div>
                                         </DisclosureButton>
                                         <DisclosurePanel className="px-4 pt-4 pb-2 text-foreground-accent">
                                             {faq.answer}
