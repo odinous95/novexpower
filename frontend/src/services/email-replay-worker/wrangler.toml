@@ -1,0 +1,13 @@
+name = "novix-email-replay"
+main = "src/worker.js"
+account_id = "04b991945e12f6fb546e1a9cbba719af"
+compatibility_date = "2022-03-25"
+
+workers_dev = true
+preview_urls = false
+
+
+[observability]
+enabled = true
+head_sampling_rate = 1 # optional. default = 1
+
