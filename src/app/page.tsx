@@ -27,7 +27,7 @@ const HomePage: React.FC = () => {
           <LineSep />
         </Section>
         <Section
-          id="Collaborations"
+          id="collaborators"
           title="Collaborations"
           description="We are proud to collaborate with these amazing teams and organizations."
         >
