@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { siteDetails } from '@/data/siteDetails';
 import { Providers } from "./provider";
-// @ts-ignore - allow importing global CSS without type declarations
+// @ts-expect-error - allow importing global CSS without type declarations
 import "../styles/globals.css";
 const manrope = Manrope({ subsets: ['latin'] });
 const sourceSans = Source_Sans_3({ subsets: ['latin'] });
