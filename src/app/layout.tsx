@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Source_Sans_3, Manrope } from "next/font/google";
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { siteDetails } from '@/data/siteDetails';
-
+// @ts-ignore: side-effect import of global CSS without type declarations
 import "./globals.css";
 import { Providers } from "./provider";
 
