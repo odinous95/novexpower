@@ -7,7 +7,7 @@ import Collaboration from "@/components/Collaborations";
 import LineSep from "@/components/LineSep";
 
 
-const HomePage: React.FC = () => {
+export default function HomePage() {
   return (
     <>
       <Section
@@ -39,5 +39,3 @@ const HomePage: React.FC = () => {
     </>
   );
 };
-
-export default HomePage;
