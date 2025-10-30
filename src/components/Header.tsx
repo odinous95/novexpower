@@ -45,7 +45,6 @@ const Header: React.FC = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // console.log(pathname);
     return (
         <header className="bg-transparent fixed top-0 left-0 right-0 md:absolute z-50 mx-auto w-full">
             <Container className="!px-0">
@@ -88,12 +87,21 @@ const Header: React.FC = () => {
                         {menuItems && menuItems.map((item) => (
                             <li key={item.text} className="flex items-center justify-between w-full relative"> {/* Added relative for positioning */}
                                 {/* Clickable Circle */}
-                                <span
+                                <div
                                     className={`w-8 h-8 my-6 rounded-full transition-colors self-center ml-1 cursor-pointer ${activeSection === item.url ? "bg-primary" : "bg-gray-300"}`}
-                                    onClick={() => window.location.href = item.url} // Navigate to the URL on click
-                                    onMouseEnter={() => setHoveredItem(item.text)} // Set the hovered item (use item.text for comparison)
-                                    onMouseLeave={() => setHoveredItem(null)} // Reset the hovered item
+                                    onClick={() => window.location.href = item.url}
+                                    onMouseEnter={() => setHoveredItem(item.text)}
+                                    onMouseLeave={() => setHoveredItem(null)}
                                 >
+                                    <span className="w-full h-full flex items-center justify-center">
+                                        <span className={`text-sm font-semibold ${activeSection === item.url ? 'text-white' : 'text-gray-700'}`}>
+                                            {activeSection === item.url ? (
+                                                <span className="text-xl font-extrabold text-white">+</span>
+                                            ) : (
+                                                <span className="text-xl font-extrabold text-gray-700">-</span>
+                                            )}
+                                        </span>
+                                    </span>
                                     {/* Hover element */}
                                     {hoveredItem === item.text && (
                                         <ul className="absolute left-0 top-0 transform translate-x-[-100%] transition-all duration-200">
@@ -102,7 +110,7 @@ const Header: React.FC = () => {
                                             </li>
                                         </ul>
                                     )}
-                                </span>
+                                </div>
                             </li>
                         ))}
                     </ul>
