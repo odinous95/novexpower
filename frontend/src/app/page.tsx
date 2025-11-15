@@ -24,20 +24,19 @@ export default function HomePage() {
           <LineSep />
         </Section>
         <Section
-          id="collaborators"
-          title="Collaborations"
-          description="We are proud to collaborate with these amazing teams and organizations."
-        >
-          <Collaboration />
-          <LineSep />
-        </Section>
-
-        <Section
           id="events"
           title="Events"
           description="Our recent and upcoming events."
         >
           <Events />
+          <LineSep />
+        </Section>
+        <Section
+          id="collaborators"
+          title="Collaborations"
+          description="We are proud to collaborate with these amazing teams and organizations."
+        >
+          <Collaboration />
           <LineSep />
         </Section>
         <FAQ />
