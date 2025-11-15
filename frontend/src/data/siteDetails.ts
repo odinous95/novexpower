@@ -2,7 +2,7 @@ export const siteDetails = {
   siteName: "NovexPower",
   siteUrl: "",
   metadata: {
-    title: "Novexpower - Next.js and Tailwind CSS Landing Page Template",
+    title: "Novexpower",
     description:
       "Novexpower empowers businesses with cutting-edge technology solutions to drive success and efficiency.",
   },
