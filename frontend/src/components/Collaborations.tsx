@@ -5,7 +5,7 @@ import React from 'react';
 
 export function Collaboration() {
     return (
-        <div className="flex flex-wrap justify-center items-center gap-x-20 gap-y-10">
+        <div className="flex flex-wrap justify-center items-center gap-x-20 gap-y-5">
             {collaborators && collaborators.map((collab) => (
                 <div
                     key={collab.name}

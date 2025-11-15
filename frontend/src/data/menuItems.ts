@@ -5,15 +5,16 @@ export const menuItems: IMenuItem[] = [
     text: "Home",
     url: "#home",
   },
+  {
+    text: "Events",
+    url: "#events",
+  },
 
   {
     text: "The Team",
     url: "#team",
   },
-  {
-    text: "Events",
-    url: "#events",
-  },
+
   {
     text: "Collaborators",
     url: "#collaborators",
