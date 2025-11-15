@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { team_members } from '@/data/team_members';
 
-const Team: React.FC = () => {
+export function Team() {
     return (
         <div className="grid gap-14 max-w-lg w-full mx-auto lg:gap-8 lg:grid-cols-3 lg:max-w-full">
             {team_members.map((member, index) => (
@@ -30,4 +30,4 @@ const Team: React.FC = () => {
     );
 };
 
-export default Team;
+

@@ -1,10 +1,7 @@
-import Hero from "@/components/Hero";
-import FAQ from "@/components/FAQ";
 import Container from "@/components/Container";
 import Section from "@/components/Section";
-import Team from "@/components/TeamMembers";
-import Collaboration from "@/components/Collaborations";
-import LineSep from "@/components/LineSep";
+import { Collaboration, Events, LineSep, Team, FAQ, Hero } from "@/components";
+
 
 
 export default function HomePage() {
@@ -32,6 +29,15 @@ export default function HomePage() {
           description="We are proud to collaborate with these amazing teams and organizations."
         >
           <Collaboration />
+          <LineSep />
+        </Section>
+
+        <Section
+          id="events"
+          title="Events"
+          description="Our recent and upcoming events."
+        >
+          <Events />
           <LineSep />
         </Section>
         <FAQ />

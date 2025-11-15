@@ -1,11 +1,10 @@
 "use client"
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import { BiMinus, BiPlus } from "react-icons/bi";
-
 import SectionTitle from "./SectionTitle";
 import { faqs } from "@/data/faq";
 
-const FAQ: React.FC = () => {
+export function FAQ() {
     return (
         <section id="faq" className="py-10 lg:py-20">
             <div className="flex flex-col lg:flex-row gap-10">
@@ -53,5 +52,3 @@ const FAQ: React.FC = () => {
         </section>
     );
 };
-
-export default FAQ;

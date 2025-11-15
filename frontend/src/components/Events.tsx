@@ -1,12 +1,13 @@
-import { collaborators } from '@/data/collaborators';
+import { events } from '@/data/events';
 import Image from 'next/image';
 import React from 'react';
 
 
-export function Collaboration() {
+
+export function Events() {
     return (
         <div className="flex flex-wrap justify-center items-center gap-x-20 gap-y-10">
-            {collaborators && collaborators.map((collab) => (
+            {events.map((collab) => (
                 <div
                     key={collab.name}
                     className="flex flex-col items-center space-y-2 text-center"
@@ -32,3 +33,4 @@ export function Collaboration() {
         </div>
     );
 };
+

@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { heroDetails } from '@/data/hero';
 
-const Hero: React.FC = () => {
+export function Hero() {
     return (
         <>
             <div className="absolute left-0 top-0 bottom-0 -z-10 w-1/2 h-full">
@@ -37,5 +37,3 @@ const Hero: React.FC = () => {
         </>
     );
 };
-
-export default Hero;
