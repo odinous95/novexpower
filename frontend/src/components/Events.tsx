@@ -1,36 +1,45 @@
-import { events } from '@/data/events';
+import { events } from '@/data';
 import Image from 'next/image';
 import React from 'react';
 
-
-
 export function Events() {
     return (
-        <div className="flex flex-wrap justify-center items-center gap-x-20 gap-y-10">
-            {events.map((collab) => (
-                <div
-                    key={collab.name}
-                    className="flex flex-col items-center space-y-2 text-center"
-                >
+        <div className="container mx-auto px-4 py-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {events.map((event) => (
                     <a
-                        href={collab.url}
+                        key={event.name}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group"
+                        className="group block transform transition hover:-translate-y-1 hover:scale-[1.02]"
                     >
-                        <div className="bg-gray-400 dark:bg-gray-400 rounded-xl p-2 shadow-sm group-hover:shadow-md transition">
-                            <Image
-                                src={collab.logo}
-                                alt={`${collab.name} logo`}
-                                width={120}
-                                height={60}
-                                className="object-contain grayscale group-hover:grayscale-0 transition"
-                            />
+                        <div className="overflow-hidden rounded-2xl shadow-md bg-white dark:bg-neutral-900">
+                            <div className="relative w-full h-56 sm:h-48 lg:h-56">
+                                <Image
+                                    src={event.image}
+                                    alt={event.name}
+                                    fill
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    className="object-cover w-full h-full transition-transform group-hover:scale-105"
+                                />
+                            </div>
+
+                            <div className="p-4">
+                                <h2 className="text-lg sm:text-xl font-semibold truncate" title={event.name}>
+                                    {event.name}
+                                </h2>
+
+                                <div className="flex items-center gap-2 text-sm text-neutral-200 mt-1">
+                                    {event.location && <span>{event.location}</span>}
+                                    {event.location && event.date && <span>|</span>}
+                                    {event.date && <span className="text-neutral-200">{event.date}</span>}
+                                </div>
+                            </div>
                         </div>
                     </a>
-                </div>
-            ))}
+                ))}
+            </div>
         </div>
     );
-};
+}
 
