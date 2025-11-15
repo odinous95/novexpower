@@ -1,11 +1,10 @@
 import Link from 'next/link';
 import React from 'react';
-import { siteDetails } from '@/data/siteDetails';
-import { footerDetails } from '@/data/footer';
+import { footerDetails, siteDetails } from '@/data';
 import { getPlatformIconByName } from '@/utils';
 import { Logo } from './logo';
 
-const Footer: React.FC = () => {
+export function Footer() {
     return (
         <footer className="bg-hero-background text-foreground py-10 bg-gray100 dark:bg-gray-700">
             <div className="max-w-7xl w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -32,7 +31,6 @@ const Footer: React.FC = () => {
                 </div>
                 <div>
                     <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
-
                     {footerDetails.email && <a href={`mailto:${footerDetails.email}`} className="block text-foreground-accent hover:text-foreground">Email: {footerDetails.email}</a>}
 
                     {footerDetails.telephone && <a href={`tel:${footerDetails.telephone}`} className="block text-foreground-accent hover:text-foreground">Phone: {footerDetails.telephone}</a>}
@@ -61,6 +59,4 @@ const Footer: React.FC = () => {
             </div>
         </footer>
     );
-};
-
-export default Footer;
+}
