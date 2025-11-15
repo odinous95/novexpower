@@ -1,6 +1,6 @@
 import { useTheme } from "next-themes";
 
-const ThemeToggler: React.FC = () => {
+export function ThemeToggler() {
     const { theme, setTheme } = useTheme();
     return (
         <button aria-label='theme toggler'
@@ -39,5 +39,3 @@ const ThemeToggler: React.FC = () => {
         </button>
     );
 };
-
-export default ThemeToggler;

@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { heroDetails } from '@/data/hero';
+import { heroDetails } from '@/data';
 
 export function Hero() {
     return (

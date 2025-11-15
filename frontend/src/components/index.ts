@@ -6,3 +6,7 @@ export * from "./Section";
 export * from "./TeamMembers";
 export * from "./LineSep";
 export * from "./Events";
+export * from "./Header";
+export * from "./Footer";
+export * from "./ToggleTheme";
+export * from "./logo";

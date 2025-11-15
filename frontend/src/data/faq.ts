@@ -22,4 +22,3 @@ export const faqs: IFAQ[] = [
     answer: `Yes, immersion cooling, particularly with Novec is a well-established and reliable method for managing high-performance battery packs. Novec is a non-toxic, fire-suppressing liquid that poses no threat to the ozone layer and has zero global warming potential, making it both safe and environmentally responsible.`,
   },
 ];
-

@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { team_members } from '@/data/team_members';
+import { team_members } from '@/data';
 
 export function Team() {
     return (

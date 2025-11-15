@@ -3,25 +3,6 @@ export interface IMenuItem {
   url: string;
 }
 
-export interface IBenefit {
-  title: string;
-  description: string;
-  imageSrc: string;
-  bullets: IBenefitBullet[];
-}
-
-export interface IBenefitBullet {
-  title: string;
-  description: string;
-  icon: JSX.Element;
-}
-
-export interface IPricing {
-  name: string;
-  price: number | string;
-  features: string[];
-}
-
 export interface IFAQ {
   question: string;
   answer: string;
@@ -32,12 +13,6 @@ export interface Iteam_members {
   role: string;
   message: string;
   avatar: string;
-}
-
-export interface IStats {
-  title: string;
-  icon: JSX.Element;
-  description: string;
 }
 
 export interface ISocials {

@@ -3,20 +3,18 @@ import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { Transition } from '@headlessui/react';
 import { HiOutlineXMark, HiBars3 } from 'react-icons/hi2';
+import { siteDetails, menuItems } from '@/data';
 import Container from './Container';
-import { siteDetails } from '@/data/siteDetails';
-import { menuItems } from '@/data/menuItems';
-import { Logo } from './logo';
-import ThemeToggler from './ToggleTheme';
+import { ThemeToggler, Logo } from '.';
 
-
-const Header: React.FC = () => {
+export function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
     const [activeSection, setActiveSection] = useState("")
     const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY + 100; // Small offset for better accuracy
@@ -40,7 +38,7 @@ const Header: React.FC = () => {
         };
 
         window.addEventListener("scroll", handleScroll);
-        handleScroll(); // Call once to set active section on load
+        handleScroll();
 
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
@@ -147,5 +145,3 @@ const Header: React.FC = () => {
         </header>
     );
 };
-
-export default Header;
