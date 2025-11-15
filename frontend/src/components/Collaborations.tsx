@@ -1,4 +1,4 @@
-import { collaborators } from '@/data/collaborators';
+import { collaborators } from '@/data';
 import Image from 'next/image';
 import React from 'react';
 
@@ -17,7 +17,7 @@ export function Collaboration() {
                         rel="noopener noreferrer"
                         className="group"
                     >
-                        <div className="bg-gray-400 dark:bg-gray-400 rounded-xl p-2 shadow-sm group-hover:shadow-md transition">
+                        <div className="bg-gray-200 dark:bg-gray-200 rounded-xl p-2 shadow-sm group-hover:shadow-md transition">
                             <Image
                                 src={collab.logo}
                                 alt={`${collab.name} logo`}
