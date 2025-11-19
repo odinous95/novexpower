@@ -15,13 +15,12 @@ export default function HomePage() {
         <Hero />
       </Section>
       <Container>
-
         <Section
-          id="events"
-          title="Events"
-          description="Our recent and upcoming events."
+          id="collaborators"
+          title="Collaborations"
+          description="We are proud to collaborate with these amazing teams and organizations."
         >
-          <Events />
+          <Collaboration />
           <LineSep />
         </Section>
         <Section
@@ -33,14 +32,13 @@ export default function HomePage() {
           <LineSep />
         </Section>
         <Section
-          id="collaborators"
-          title="Collaborations"
-          description="We are proud to collaborate with these amazing teams and organizations."
+          id="events"
+          title="Events"
+          description="Our recent and upcoming events."
         >
-          <Collaboration />
+          <Events />
           <LineSep />
         </Section>
-
         <FAQ />
       </Container>
     </>
