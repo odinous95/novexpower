@@ -6,17 +6,16 @@ export const menuItems: IMenuItem[] = [
     url: "#home",
   },
   {
-    text: "Events",
-    url: "#events",
+    text: "Collaborators",
+    url: "#collaborators",
   },
 
   {
     text: "The Team",
     url: "#team",
   },
-
   {
-    text: "Collaborators",
-    url: "#collaborators",
+    text: "Events",
+    url: "#events",
   },
 ];
