@@ -17,12 +17,12 @@ export function Collaboration() {
                         rel="noopener noreferrer"
                         className="group"
                     >
-                        <div className="bg-gray-200 dark:bg-gray-200 rounded-xl p-2 shadow-sm group-hover:shadow-md transition">
+                        <div className="bg-gray-200 dark:bg-gray-200 rounded-xl p-1 shadow-sm group-hover:shadow-md transition">
                             <Image
                                 src={collab.logo}
                                 alt={`${collab.name} logo`}
                                 width={120}
-                                height={60}
+                                height={120}
                                 className="object-contain grayscale group-hover:grayscale-0 transition"
                             />
                         </div>

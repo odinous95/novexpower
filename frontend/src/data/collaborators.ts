@@ -7,6 +7,6 @@ export const collaborators = [
   {
     name: "KTH",
     url: "https://kth.se/",
-    logo: "/logos/kth.png",
+    logo: "/logos/kth.webp",
   },
 ];
