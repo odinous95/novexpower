@@ -17,7 +17,7 @@ export function Collaboration() {
                         rel="noopener noreferrer"
                         className="group"
                     >
-                        <div className="bg-gray-200 dark:bg-gray-200 rounded-xl p-1 shadow-sm group-hover:shadow-md transition">
+                        <div className="bg-gray-200 dark:bg-white rounded-xl p-1 shadow-sm group-hover:shadow-md transition">
                             <Image
                                 src={collab.logo}
                                 alt={`${collab.name} logo`}
