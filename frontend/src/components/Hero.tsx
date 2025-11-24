@@ -1,4 +1,3 @@
-
 "use client"
 import React from 'react';
 import Image from 'next/image';
@@ -11,7 +10,7 @@ export function Hero() {
                 {/* LEFT GRID (no electron) */}
                 <div className="absolute left-0 top-0 -z-20 w-5/12 h-full">
                     <div
-                        className="absolute inset-0 h-full w-full bg-[linear-gradient(to_left,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#0696701a_1px,transparent_1px)] bg-[size:40px_30px] [mask-image:radial-gradient(ellipse_70%_70%_at_80%_20%,#000_60%,transparent_100%)]"
+                        className="absolute inset-0 h-full w-full bg-[linear-gradient(to_left,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#8080801a_1px,transparent_1px)] bg-[size:40px_30px] [mask-image:radial-gradient(ellipse_70%_70%_at_80%_20%,#000_60%,transparent_100%)]"
                         aria-hidden
                     >
                     </div>
@@ -43,7 +42,7 @@ export function Hero() {
                                 id="rightPath"
                                 d="M40 90 L820 90 L820 150 L40 150 L40 210 L820 210 L820 270 L40 270 L40 330 L820 330"
                                 fill="none"
-                                stroke="rgba(123,247,216,0.05)"
+                                stroke="rgba(128,128,128,0.05)"
                                 strokeWidth="2"
                                 strokeLinecap="round"
                             />
@@ -73,7 +72,10 @@ export function Hero() {
                             priority={true}
                             unoptimized={true}
                             alt="Hero image"
-                            className="mx-auto z-10 w-full max-w-xs sm:max-w-sm md:max-w-md h-auto"
+                            draggable={false}
+                            onMouseDown={(e) => e.preventDefault()}
+                            style={{ userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none' }}
+                            className="mx-auto z-10 w-full max-w-xs sm:max-w-sm md:max-w-md h-auto select-none"
                         />
                     </div>
                 </div>
@@ -110,4 +112,3 @@ export function Hero() {
         </>
     );
 }
-
