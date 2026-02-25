@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { GoogleAnalytics } from '@next/third-parties/google';
+import Script from "next/script";
 import { Source_Sans_3, Manrope } from "next/font/google";
 import { Header } from "@/components";
 import { siteDetails } from '@/data';
@@ -44,7 +44,22 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${manrope.className} ${sourceSans.className} antialiased`}>
-        {siteDetails.googleAnalyticsId && <GoogleAnalytics gaId={siteDetails.googleAnalyticsId} />}
+        {siteDetails.googleAnalyticsId && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${siteDetails.googleAnalyticsId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${siteDetails.googleAnalyticsId}');
+              `}
+            </Script>
+          </>
+        )}
         <Providers>
           <Header />
           <main>{children}</main>
