@@ -11,7 +11,7 @@ const manrope = Manrope({ subsets: ['latin'] });
 const sourceSans = Source_Sans_3({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteDetails.siteUrl || 'https://novexpower.com'), // Add this line
+  metadataBase: new URL(siteDetails.siteUrl || 'https://novexpower.com'),
   title: siteDetails.metadata.title,
   description: siteDetails.metadata.description,
   openGraph: {
@@ -42,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${manrope.className} ${sourceSans.className} antialiased`}>
         {siteDetails.googleAnalyticsId && <GoogleAnalytics gaId={siteDetails.googleAnalyticsId} />}
         <Providers>
