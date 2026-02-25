@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Source_Sans_3, Manrope } from "next/font/google";
-import { Header, Footer } from "@/components";
+import { Header } from "@/components";
 import { siteDetails } from '@/data';
 import { Providers } from "./provider";
 import "../styles/globals.css";
+import Footer from "@/components/Footer";
+
 const manrope = Manrope({ subsets: ['latin'] });
 const sourceSans = Source_Sans_3({ subsets: ['latin'] });
 
@@ -39,19 +41,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark"
-    >
-      <body
-        className={`${manrope.className} ${sourceSans.className} antialiased`}
-      >
+    <html lang="en" className="dark">
+      <body className={`${manrope.className} ${sourceSans.className} antialiased`}>
         {siteDetails.googleAnalyticsId && <GoogleAnalytics gaId={siteDetails.googleAnalyticsId} />}
         <Providers>
           <Header />
-          <main>
-            {children}
-          </main>
+          <main>{children}</main>
           <Footer />
-        </Providers >
+        </Providers>
       </body>
     </html>
   );
