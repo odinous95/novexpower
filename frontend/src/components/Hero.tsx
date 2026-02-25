@@ -43,13 +43,13 @@ export function Hero() {
 
                 <div className="relative mt-8 md:mt-16 flex justify-center">
                     <Image
-                        src="images/hero-mockup.webp"
+                        src="/images/hero-mockup.webp"
                         width={320}
                         height={284}
-                        quality={100}
+                        quality={75}
                         sizes="(max-width: 640px) 90vw, (max-width: 768px) 70vw, 384px"
                         priority={true}
-                        unoptimized={true}
+                        unoptimized={false}
                         alt="Hero image"
                         draggable={false}
                         onMouseDown={(e) => e.preventDefault()}
