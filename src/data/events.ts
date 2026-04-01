@@ -1,15 +1,20 @@
-
 export const events = [
-    {
-        name: "The Swedish Battery Reboot",
-        date: "25.11.25",
-        location: "Tekniska högskolan, Stockholm",
-        image: "/images/battery-reboot-1.jpeg"
-    },
-    {
-        name: "Exhibitors, Speakers & Contributors",
-        date: "25.11.25",
-        location: "Stockholm, Sweden",
-        image: "/images/battery-reboot-2.jpeg"
-    }
+  {
+    name: "We're officially part of Batch 22 at KTH Innovation Launch",
+    date: "15.01.26",
+    location: "KTH Innovation, Stockholm",
+    image: "/images/Team.webp",
+  },
+  {
+    name: "The Swedish Battery Reboot",
+    date: "25.11.25",
+    location: "Tekniska högskolan, Stockholm",
+    image: "/images/battery-reboot-1.jpeg",
+  },
+  {
+    name: "Exhibitors, Speakers & Contributors",
+    date: "25.11.25",
+    location: "Stockholm, Sweden",
+    image: "/images/battery-reboot-2.jpeg",
+  },
 ];
