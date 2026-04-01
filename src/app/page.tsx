@@ -13,6 +13,7 @@ export default function HomePage() {
         description=""
       >
         <Hero />
+        <LineSep />
       </Section>
       <Container>
         <Section
