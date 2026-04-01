@@ -1,6 +1,6 @@
 export const events = [
   {
-    name: "We're officially part of Batch 22 at KTH Innovation Launch",
+    name: "Batch 22 at KTH Innovation Launch",
     date: "15.01.26",
     location: "KTH Innovation, Stockholm",
     image: "/images/Team.webp",
