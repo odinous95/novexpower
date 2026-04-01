@@ -5,7 +5,7 @@ import { heroDetails } from '@/data';
 
 export function Hero() {
     return (
-        <div className="relative w-full">
+        <div className="relative w-full min-h-screen flex items-center justify-center">
             {/* LEFT GRID */}
             <div className="absolute left-0 top-0 -z-20 w-5/12 h-full">
                 <div
@@ -33,28 +33,28 @@ export function Hero() {
             </div>
 
             {/* Centered content */}
-            <div className="w-full max-w-xl mx-auto text-center px-2 relative z-10 py-16">
-                <h1 className="whitespace-normal md:whitespace-nowrap backdrop-blur-[2px] bg-gradient-to-b text-2xl sm:text-3xl md:text-5xl md:leading-tight font-bold text-foreground mx-auto hero-title">
+            <div className="w-full max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto text-center px-4 sm:px-6 relative z-10 flex flex-col items-center justify-center gap-3 sm:gap-4">
+                <h1 className="whitespace-normal md:whitespace-nowrap backdrop-blur-[2px] bg-gradient-to-b text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mx-auto hero-title leading-tight">
                     {heroDetails.heading}
                 </h1>
-                <p className="mt-3 sm:mt-4 text-foreground max-w-md mx-auto text-base sm:text-lg backdrop-blur-[2px] bg-gradient-to-b">
+                <p className="text-foreground max-w-lg mx-auto text-base sm:text-lg md:text-xl backdrop-blur-[2px] bg-gradient-to-b">
                     {heroDetails.subheading}
                 </p>
 
-                <div className="relative mt-8 md:mt-16 flex justify-center">
+                <div className="relative flex justify-center w-full mt-0 sm:mt-1">
                     <Image
-                        src="/images/hero-mockup.webp"
-                        width={320}
-                        height={284}
+                        src="/images/hero-mockup.png"
+                        width={1200}
+                        height={20}
                         quality={75}
-                        sizes="(max-width: 640px) 90vw, (max-width: 768px) 70vw, 384px"
+                        sizes="(max-width: 480px) 95vw, (max-width: 640px) 90vw, (max-width: 768px) 85vw, (max-width: 1024px) 80vw, (max-width: 1536px) 80vw, 85vw"
                         priority={true}
                         unoptimized={false}
                         alt="Hero image"
                         draggable={false}
                         onMouseDown={(e) => e.preventDefault()}
                         style={{ userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none' }}
-                        className="mx-auto z-10 w-full max-w-xs sm:max-w-sm md:max-w-md h-auto select-none"
+                        className="mx-auto z-10 w-full h-auto select-none rounded-lg"
                     />
                 </div>
             </div>
