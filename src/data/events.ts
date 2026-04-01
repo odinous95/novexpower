@@ -2,13 +2,13 @@ export const events = [
   {
     name: "Batch 22 at KTH Innovation Launch",
     date: "15.01.26",
-    location: "KTH Innovation, Stockholm",
+    location: "Stockholm, Sweden",
     image: "/images/Team.webp",
   },
   {
     name: "The Swedish Battery Reboot",
     date: "25.11.25",
-    location: "Tekniska högskolan, Stockholm",
+    location: "Stockholm, Sweden",
     image: "/images/battery-reboot-1.jpeg",
   },
   {
