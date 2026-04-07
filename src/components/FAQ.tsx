@@ -25,10 +25,9 @@ export function FAQ() {
                             <Disclosure>
                                 {({ open }) => (
                                     <span>
-                                        <DisclosureButton className="flex items-center justify-between w-full px-4 pt text-lg text-left">
-                                            <span className="text-2xl font-semibold">{faq.question}</span>
+                                        <DisclosureButton className="flex items-center w-full gap-3 px-4 pt text-lg text-left">
                                             <div
-                                                className={`w-6 h-6 my-2 rounded-full transition-colors self-center ml-1 cursor-pointer ${open ? "bg-primary" : "bg-gray-300"}`}
+                                                className={`w-6 h-6 my-2 rounded-full transition-colors shrink-0 self-center cursor-pointer ${open ? "bg-primary" : "bg-gray-300"}`}
                                             >
                                                 <span className="w-full h-full flex items-center justify-center">
                                                     {open ? (
@@ -38,6 +37,7 @@ export function FAQ() {
                                                     )}
                                                 </span>
                                             </div>
+                                            <span className="text-2xl font-semibold">{faq.question}</span>
                                         </DisclosureButton>
                                         <DisclosurePanel className="px-4 pt-4 pb-2 text-foreground-accent">
                                             {faq.answer}

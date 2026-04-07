@@ -86,6 +86,12 @@ const Footer: React.FC = () => {
                             Connect With Us
                         </h4>
                         <div className="space-y-4">
+                            <button
+                                onClick={openModal}
+                                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition duration-300 mt-4"
+                            >
+                                Interested
+                            </button>
                             {footerDetails.socials && (
                                 <div className="flex items-center gap-4 flex-wrap">
                                     {Object.keys(footerDetails.socials).map(platformName => {
@@ -104,12 +110,6 @@ const Footer: React.FC = () => {
                                     })}
                                 </div>
                             )}
-                            <button
-                                onClick={openModal}
-                                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition duration-300 mt-4"
-                            >
-                                Interested
-                            </button>
                         </div>
                     </div>
                 </div>

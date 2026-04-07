@@ -13,6 +13,23 @@ interface MenuProps {
 export function Menu({ isOpen, toggleMenu, activeSection, setActiveSection }: MenuProps) {
     const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
+    const handleMobileNavigation = (url: string, event: React.MouseEvent<HTMLAnchorElement>) => {
+        event.preventDefault();
+
+        const targetId = url.startsWith('#') ? url.slice(1) : url;
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            setActiveSection(url);
+            if (window.location.hash !== url) {
+                window.history.pushState(null, '', url);
+            }
+        }
+
+        toggleMenu();
+    };
+
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY + 100; // Small offset for better accuracy
@@ -93,7 +110,11 @@ export function Menu({ isOpen, toggleMenu, activeSection, setActiveSection }: Me
                     <ul className="flex flex-col items-center space-y-4 pt-8 pb-6 px-6">
                         {menuItems.map(item => (
                             <li key={item.text} className="border-b border-foreground/20 last:border-b-0">
-                                <Link href={item.url} className="text-foreground hover:text-primary block" onClick={toggleMenu}>
+                                <Link
+                                    href={item.url}
+                                    className="block text-base font-medium text-blue-700 dark:text-gray-100 hover:text-blue-500 dark:hover:text-blue-300 transition-colors duration-200"
+                                    onClick={(event) => handleMobileNavigation(item.url, event)}
+                                >
                                     {item.text}
                                 </Link>
                             </li>
