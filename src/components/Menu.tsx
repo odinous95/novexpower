@@ -86,22 +86,19 @@ export function Menu({ isOpen, toggleMenu, activeSection, setActiveSection }: Me
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
             >
-                <div id="mobile-menu" className="md:hidden fixed inset-0 top-16 z-40">
-                    {/* Backdrop blur */}
-                    <div className="absolute inset-0 bg-background/40 dark:bg-background/50 backdrop-blur-md" />
-
-                    {/* Content with shadow edges */}
-                    <div className="relative h-full bg-gradient-to-b from-background to-background/90 dark:from-[--primary-accent] dark:to-[--primary-accent]/90 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.2),inset_0_-4px_16px_-4px_rgba(0,0,0,0.05)] dark:shadow-[0_8px_32px_-8px_rgba(0,0,0,0.4),inset_0_-4px_16px_-4px_rgba(0,0,0,0.2)]">
-                        <ul className="flex flex-col items-center space-y-4 pt-8 pb-6 px-6">
-                            {menuItems.map(item => (
-                                <li key={item.text} className="border-b border-foreground/10 dark:border-foreground/20">
-                                    <Link href={item.url} className="text-foreground hover:text-primary transition-colors duration-200 block py-2" onClick={toggleMenu}>
-                                        {item.text}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                <div
+                    id="mobile-menu"
+                    className="md:hidden overflow-hidden border-t border-foreground/10 bg-background/90 supports-[backdrop-filter]:bg-background/70 backdrop-blur-xl shadow-[inset_0_1px_0_rgba(255,255,255,0.30),inset_0_-12px_20px_rgba(0,0,0,0.10),0_14px_28px_rgba(0,0,0,0.14)]"
+                >
+                    <ul className="flex flex-col items-center space-y-4 pt-8 pb-6 px-6">
+                        {menuItems.map(item => (
+                            <li key={item.text} className="border-b border-foreground/20 last:border-b-0">
+                                <Link href={item.url} className="text-foreground hover:text-primary block" onClick={toggleMenu}>
+                                    {item.text}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </Transition>
         </>
