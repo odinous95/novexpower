@@ -14,7 +14,7 @@ const Section: React.FC<React.PropsWithChildren<Props>> = ({ id, title, descript
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                setIsVisible(entry.isInView);
+                setIsVisible(entry.isIntersecting);
             },
             { threshold: 0.1 }
         );
