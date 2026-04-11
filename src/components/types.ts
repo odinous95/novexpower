@@ -16,6 +16,7 @@ export interface Iteam_members {
 }
 
 export interface ISocials {
+  email?: string;
   facebook?: string;
   github?: string;
   instagram?: string;

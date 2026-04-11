@@ -18,5 +18,6 @@ export const footerDetails: {
   telephone: "",
   socials: {
     linkedin: "https://www.linkedin.com/company/novexpower",
+    email: "mailto:info@novexpower",
   },
 };

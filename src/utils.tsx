@@ -1,9 +1,12 @@
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaThreads, FaTwitter, FaXTwitter, FaYoutube } from "react-icons/fa6";
+import { FaEnvelope, FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaThreads, FaTwitter, FaXTwitter, FaYoutube } from "react-icons/fa6";
 
 export const getPlatformIconByName = (platformName: string): JSX.Element | null => {
     switch (platformName) {
         case 'facebook': {
             return <FaFacebook size={24} className='min-w-fit' />;
+        }
+        case 'email': {
+            return <FaEnvelope size={24} className='min-w-fit' />;
         }
         case 'github': {
             return <FaGithub size={24} className='min-w-fit' />;

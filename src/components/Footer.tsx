@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
 
                     {/* Quick Links Section */}
                     <div>
-                        <h4 className="text-lg font-semibold mb-6 text-white border-b border-blue-600 pb-2">
+                        <h4 className="text-lg font-semibold mb-6 text-white border-b border-gray-500 pb-2">
                             Quick Links
                         </h4>
                         <ul className="space-y-3">
@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
 
                     {/* Contact Section */}
                     <div>
-                        <h4 className="text-lg font-semibold mb-6 text-white border-b border-blue-600 pb-2">
+                        <h4 className="text-lg font-semibold mb-6 text-white border-b border-gray-500 pb-2">
                             Get in Touch
                         </h4>
                         <div className="space-y-4">
@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
 
                     {/* Social & CTA Section */}
                     <div>
-                        <h4 className="text-lg font-semibold mb-6 text-white border-b border-blue-600 pb-2">
+                        <h4 className="text-lg font-semibold mb-6 text-white border-b border-gray-500 pb-2">
                             Connect With Us
                         </h4>
                         <div className="space-y-4">

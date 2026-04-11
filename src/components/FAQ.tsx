@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import { BiMinus, BiPlus } from "react-icons/bi";
 import SectionTitle from "./SectionTitle";
@@ -13,10 +14,15 @@ export function FAQ() {
                     <SectionTitle>
                         <h2 className="my-3 !leading-snug lg:max-w-sm text-center lg:text-left">Frequently Asked Questions</h2>
                     </SectionTitle>
-                    <p className="lg:mt-10 text-foreground-accent text-center lg:text-left">
-                        Ask us anything!
-                    </p>
-                    <a href="mailto:" className="mt-3 block text-xl lg:text-4xl text-secondary font-semibold hover:underline text-center lg:text-left">info@novexpower.com</a>
+                    <div className="mt-6 lg:mt-10 max-w-xs mx-auto lg:mx-0">
+                        <Image
+                            src="/images/faq-illustration.svg"
+                            alt="FAQ illustration"
+                            width={640}
+                            height={420}
+                            className="w-full h-auto rounded-xl object-cover"
+                        />
+                    </div>
                 </div>
 
                 <div className="w-full lg:max-w-2xl mx-auto">

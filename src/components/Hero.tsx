@@ -1,5 +1,4 @@
 "use client"
-import React from 'react';
 import Image from 'next/image';
 import { heroDetails } from '@/data';
 
@@ -45,18 +44,18 @@ export function Hero() {
                     </div>
 
                     <Image
-                        src="/images/hero-mockup.png"
+                        src={heroDetails.centerImageSrc}
                         width={1200}
                         height={800}
                         quality={75}
-                        sizes="(max-width: 420px) 100vw, (max-width: 640px) 95vw, (max-width: 768px) 90vw, (max-width: 1024px) 85vw, (max-width: 1536px) 80vw, 75vw"
+                        sizes="(max-width: 420px) 82vw, (max-width: 640px) 78vw, (max-width: 768px) 72vw, (max-width: 1024px) 64vw, (max-width: 1536px) 56vw, 50vw"
                         priority={true}
                         unoptimized={false}
                         alt="Hero image"
                         draggable={false}
                         onMouseDown={(e) => e.preventDefault()}
                         style={{ userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none' }}
-                        className="mx-auto z-10 w-full px-3 sm:px-4 md:px-6 lg:px-8 max-w-[62rem] h-auto select-none rounded-lg sm:rounded-xl aspect-video object-cover"
+                        className="mx-auto z-10 w-full max-w-[14rem] sm:max-w-[22rem] md:max-w-[31rem] lg:max-w-[40rem] xl:max-w-[46rem] 2xl:max-w-[52rem] h-auto select-none rounded-lg sm:rounded-xl object-cover"
                     />
                 </div>
             </div>
