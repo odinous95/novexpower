@@ -10,4 +10,7 @@ export * from "./Header";
 export * from "./Footer";
 export * from "./ToggleTheme";
 export * from "./logo";
-export { ContactModal } from "./ContactModal";
+export * from "./ContactModal";
+export * from "./submit-button";
+export * from "./input";
+
