@@ -55,10 +55,10 @@ export function ContactForm({ data, mode = "section", onSuccess }: ContactFormPr
     >
       <div className={isEmbedded ? "" : "container"}>
         <div
-          className={`mx-auto mb-0 w-full rounded-2xl border border-black/5 bg-white/95 px-3 py-5 shadow-[0_20px_50px_rgba(0,0,0,0.08)] backdrop-blur-sm dark:border-white/10 dark:bg-white/5 sm:px-5 sm:py-6 md:px-6 md:py-7 ${isEmbedded ? "max-w-3xl" : "max-w-5xl sm:px-6 sm:py-8 md:px-8 md:py-10 lg:px-10 lg:py-12"}`}
+          className={`mx-auto mb-0 w-full rounded-2xl border border-black/5 bg-white/95 px-3 py-4 shadow-[0_20px_50px_rgba(0,0,0,0.08)] backdrop-blur-sm dark:border-white/10 dark:bg-white/5 sm:px-5 sm:py-5 md:px-6 md:py-6 ${isEmbedded ? "max-w-none" : "max-w-5xl sm:px-6 sm:py-8 md:px-8 md:py-10 lg:px-10 lg:py-12"}`}
           data-wow-delay=".15s"
         >
-          <h2 className={`text-center font-bold text-black dark:text-white ${isEmbedded ? "mb-2 text-xl sm:text-2xl" : "mb-3 text-2xl sm:text-3xl lg:text-4xl"}`}>
+          <h2 className={`text-center font-bold tracking-tight text-slate-950 dark:text-white ${isEmbedded ? "mb-2 text-xl sm:text-2xl" : "mb-3 text-2xl sm:text-3xl lg:text-4xl"}`}>
             {title}
           </h2>
           <p className={`mx-auto text-center font-medium leading-6 text-slate-600 dark:text-slate-300 ${isEmbedded ? "mb-4 max-w-2xl text-xs sm:text-sm" : "mb-8 max-w-3xl text-sm sm:text-base md:mb-10 md:leading-8"}`}>
@@ -140,7 +140,7 @@ export function ContactForm({ data, mode = "section", onSuccess }: ContactFormPr
 
             {state && (
               <div
-                className={`mt-4 flex items-center space-x-2 rounded-xl p-2.5 text-xs sm:p-3 sm:text-sm ${state.success
+                className={`mt-4 flex items-center gap-2 rounded-2xl p-3 text-sm sm:p-4 ${state.success
                   ? "bg-green-50 text-green-600 dark:bg-green-900 dark:text-green-300"
                   : "bg-red-50 text-red-600 dark:bg-red-900 dark:text-red-300"
                   }`}
@@ -148,10 +148,10 @@ export function ContactForm({ data, mode = "section", onSuccess }: ContactFormPr
                 aria-atomic="true"
               >
                 <ExclamationCircleIcon
-                  className={`h-4 w-4 sm:h-5 sm:w-5 ${state.success ? "text-green-500" : "text-red-500"
+                  className={`h-5 w-5 shrink-0 ${state.success ? "text-green-500" : "text-red-500"
                     }`}
                 />
-                <strong>
+                <strong className="leading-6">
                   {state.success
                     ? successMessage
                     : state.message || errorMessage}
