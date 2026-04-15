@@ -2,10 +2,15 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { footerDetails, siteDetails } from '@/data';
 import { getPlatformIconByName } from '@/utils';
 import { Logo } from './logo';
-import { ContactModal } from './ContactModal'; // Import the ContactModal
+
+const ContactModal = dynamic(
+    () => import('./ContactModal').then((mod) => mod.ContactModal),
+    { ssr: false }
+);
 
 const Footer: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState(false); // State for modal
@@ -101,6 +106,8 @@ const Footer: React.FC = () => {
                                                 </Link>
                                             )
                                         }
+
+                                        return null;
                                     })}
                                 </div>
                             )}

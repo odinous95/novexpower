@@ -13,50 +13,73 @@ interface MenuProps {
 export function Menu({ isOpen, toggleMenu, activeSection, setActiveSection }: MenuProps) {
     const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
-    const handleMobileNavigation = (url: string, event: React.MouseEvent<HTMLAnchorElement>) => {
-        event.preventDefault();
-
+    const navigateToSection = (url: string) => {
         const targetId = url.startsWith('#') ? url.slice(1) : url;
         const targetSection = document.getElementById(targetId);
 
         if (targetSection) {
             targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
             setActiveSection(url);
+
             if (window.location.hash !== url) {
                 window.history.pushState(null, '', url);
             }
+
+            return;
         }
+
+        window.location.href = url;
+    };
+
+    const handleMobileNavigation = (url: string, event: React.MouseEvent<HTMLAnchorElement>) => {
+        event.preventDefault();
+
+        navigateToSection(url);
 
         toggleMenu();
     };
 
     useEffect(() => {
+        let ticking = false;
+
         const handleScroll = () => {
-            const scrollPosition = window.scrollY + 100; // Small offset for better accuracy
+            if (ticking) {
+                return;
+            }
 
-            menuItems.forEach((item, index) => {
-                const section = document.querySelector(item.url);
-                if (section) {
-                    const sectionTop = (section as HTMLElement).offsetTop;
-                    const sectionBottom = sectionTop + (section as HTMLElement).offsetHeight;
+            ticking = true;
 
-                    // Special case for the first section
-                    if (index === 0 && scrollPosition < sectionBottom) {
-                        setActiveSection(item.url);
+            requestAnimationFrame(() => {
+                const scrollPosition = window.scrollY + 100; // Small offset for better accuracy
+                let nextActiveSection = menuItems[0]?.url || "";
+
+                menuItems.forEach((item, index) => {
+                    const section = document.querySelector(item.url);
+                    if (section) {
+                        const sectionTop = (section as HTMLElement).offsetTop;
+                        const sectionBottom = sectionTop + (section as HTMLElement).offsetHeight;
+
+                        // Special case for the first section
+                        if (index === 0 && scrollPosition < sectionBottom) {
+                            nextActiveSection = item.url;
+                        }
+                        // Regular case for other sections
+                        else if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                            nextActiveSection = item.url;
+                        }
                     }
-                    // Regular case for other sections
-                    else if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                        setActiveSection(item.url);
-                    }
-                }
+                });
+
+                setActiveSection(nextActiveSection);
+                ticking = false;
             });
         };
 
-        window.addEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", handleScroll, { passive: true });
         handleScroll();
 
         return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    }, [setActiveSection]);
 
     return (
         <>
@@ -67,7 +90,7 @@ export function Menu({ isOpen, toggleMenu, activeSection, setActiveSection }: Me
                         {/* Clickable Circle */}
                         <div
                             className={`w-8 h-8 my-6 rounded-full transition-colors self-center ml-1 cursor-pointer ${activeSection === item.url ? "bg-primary" : "bg-gray-300"}`}
-                            onClick={() => window.location.href = item.url}
+                            onClick={() => navigateToSection(item.url)}
                             onMouseEnter={() => setHoveredItem(item.text)}
                             onMouseLeave={() => setHoveredItem(null)}
                         >

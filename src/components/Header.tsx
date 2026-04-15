@@ -10,7 +10,7 @@ export function Header() {
     const isHomePage = pathname === '/';
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => {
-        setIsOpen(!isOpen);
+        setIsOpen((previous) => !previous);
     };
     const [activeSection, setActiveSection] = useState("");
 

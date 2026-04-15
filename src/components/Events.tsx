@@ -6,10 +6,8 @@ export function Events() {
     return (
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
             {events.map((event) => (
-                <a
+                <article
                     key={event.name}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="group block transform transition duration-300 hover:-translate-y-1"
                 >
                     <div className="overflow-hidden rounded-2xl border border-slate-200/80 bg-white/70 shadow-[0_8px_30px_rgba(15,23,42,0.08)] backdrop-blur-md transition duration-300 group-hover:border-sky-400/30 group-hover:shadow-[0_12px_40px_rgba(14,165,233,0.12)] dark:border-white/10 dark:bg-slate-950/55">
@@ -70,7 +68,7 @@ export function Events() {
                             </div>
                         </div>
                     </div>
-                </a>
+                </article>
             ))}
         </div>
     );

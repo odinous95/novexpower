@@ -26,7 +26,7 @@ export function FAQ() {
                 <div className="mt-8 grid grid-cols-1 gap-8 md:gap-10 lg:mt-12 lg:grid-cols-[minmax(0,1.35fr)_minmax(280px,0.85fr)] lg:items-start">
                     <div className="w-full">
                         {faqs && faqs.map((faq, index) => (
-                            <div key={index} className="mb-6 sm:mb-7">
+                            <div key={faq.question} className="mb-6 sm:mb-7">
                                 <Disclosure>
                                     {({ open }) => (
                                         <div className="rounded-2xl border border-slate-200/80 bg-white/70 shadow-[0_8px_30px_rgba(15,23,42,0.08)] backdrop-blur-md transition-all duration-300 hover:border-sky-400/30 hover:shadow-[0_12px_40px_rgba(14,165,233,0.12)] dark:border-white/10 dark:bg-slate-950/55">
