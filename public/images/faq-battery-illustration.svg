@@ -1,0 +1,62 @@
+<svg width="960" height="680" viewBox="0 0 960 680" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="80" x2="840" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="battery" x1="180" y1="170" x2="780" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0EA5E9"/>
+      <stop offset="1" stop-color="#22C55E"/>
+    </linearGradient>
+    <linearGradient id="cell" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#E2E8F0"/>
+      <stop offset="1" stop-color="#94A3B8"/>
+    </linearGradient>
+    <filter id="glow" x="80" y="80" width="800" height="520" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="680" rx="40" fill="url(#bg)"/>
+
+  <g filter="url(#glow)" opacity="0.35">
+    <rect x="190" y="180" width="580" height="320" rx="34" fill="#38BDF8"/>
+  </g>
+
+  <rect x="170" y="160" width="620" height="360" rx="34" fill="#0B1220" stroke="#334155" stroke-width="4"/>
+  <rect x="790" y="280" width="28" height="120" rx="8" fill="#334155"/>
+
+  <rect x="205" y="190" width="550" height="300" rx="24" fill="url(#battery)"/>
+
+  <rect x="228" y="214" width="164" height="253" rx="18" fill="#0F172A" fill-opacity="0.88"/>
+  <rect x="398" y="214" width="164" height="253" rx="18" fill="#0F172A" fill-opacity="0.88"/>
+  <rect x="568" y="214" width="164" height="253" rx="18" fill="#0F172A" fill-opacity="0.88"/>
+
+  <g opacity="0.92">
+    <rect x="248" y="236" width="124" height="24" rx="9" fill="url(#cell)"/>
+    <rect x="248" y="271" width="124" height="24" rx="9" fill="url(#cell)"/>
+    <rect x="248" y="306" width="124" height="24" rx="9" fill="url(#cell)"/>
+    <rect x="248" y="341" width="124" height="24" rx="9" fill="url(#cell)"/>
+    <rect x="248" y="376" width="124" height="24" rx="9" fill="url(#cell)"/>
+
+    <rect x="418" y="236" width="124" height="24" rx="9" fill="url(#cell)"/>
+    <rect x="418" y="271" width="124" height="24" rx="9" fill="url(#cell)"/>
+    <rect x="418" y="306" width="124" height="24" rx="9" fill="url(#cell)"/>
+    <rect x="418" y="341" width="124" height="24" rx="9" fill="url(#cell)"/>
+    <rect x="418" y="376" width="124" height="24" rx="9" fill="url(#cell)"/>
+
+    <rect x="588" y="236" width="124" height="24" rx="9" fill="url(#cell)"/>
+    <rect x="588" y="271" width="124" height="24" rx="9" fill="url(#cell)"/>
+    <rect x="588" y="306" width="124" height="24" rx="9" fill="url(#cell)"/>
+    <rect x="588" y="341" width="124" height="24" rx="9" fill="url(#cell)"/>
+    <rect x="588" y="376" width="124" height="24" rx="9" fill="url(#cell)"/>
+  </g>
+
+  <path d="M508 68L430 214H500L444 352L604 184H530L594 68H508Z" fill="#FACC15"/>
+
+  <circle cx="178" cy="546" r="8" fill="#38BDF8"/>
+  <circle cx="214" cy="576" r="5" fill="#22C55E"/>
+  <circle cx="750" cy="114" r="6" fill="#FACC15"/>
+
+  <text x="60" y="620" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="28" font-weight="700">Advanced Battery Systems</text>
+</svg>

@@ -7,15 +7,16 @@ import { HiBars3, HiOutlineXMark } from 'react-icons/hi2';
 interface NavbarProps {
     toggleMenu: () => void;
     isOpen: boolean;
+    showSectionMenu: boolean;
 }
 
-export function Navbar({ toggleMenu, isOpen }: NavbarProps) {
+export function Navbar({ toggleMenu, isOpen, showSectionMenu }: NavbarProps) {
     return (
-        <nav className="shadow-md md:shadow-none bg-white dark:bg-[--background] md:bg-transparent mx-auto flex justify-between items-center py-2 px-5 md:py-10">
+        <nav className="mx-auto flex items-center justify-between bg-white px-3 py-2 shadow-md dark:bg-[--background] sm:px-4 md:bg-transparent md:px-5 md:py-8 md:shadow-none">
             {/* Logo */}
-            <span className="flex items-center">
+            <span className="flex min-w-0 items-center">
                 <Logo />
-                <span className="manrope text-xl font-semibold text-foreground cursor-pointer backdrop-blur-[2px] bg-gradient-to-b ml-2">
+                <span className="manrope ml-2 truncate bg-gradient-to-b text-base font-semibold text-foreground backdrop-blur-[2px] sm:text-lg md:text-xl">
                     {siteDetails.siteName}
                 </span>
             </span>
@@ -24,24 +25,26 @@ export function Navbar({ toggleMenu, isOpen }: NavbarProps) {
             </span>
 
             {/* Mobile Menu Button */}
-            <div className="md:hidden flex items-center">
-                <span className="mr-4">
+            <div className="flex items-center md:hidden">
+                <span className="mr-2 sm:mr-3">
                     <ThemeToggler />
                 </span>
-                <button
-                    onClick={toggleMenu}
-                    type="button"
-                    className="bg-primary text-white focus:outline-none rounded-full w-10 h-10 flex items-center justify-center"
-                    aria-controls="mobile-menu"
-                    aria-expanded={isOpen}
-                >
-                    {isOpen ? (
-                        <HiOutlineXMark className="h-6 w-6" aria-hidden="true" />
-                    ) : (
-                        <HiBars3 className="h-6 w-6" aria-hidden="true" />
-                    )}
-                    <span className="sr-only">Toggle navigation</span>
-                </button>
+                {showSectionMenu && (
+                    <button
+                        onClick={toggleMenu}
+                        type="button"
+                        className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-white focus:outline-none sm:h-10 sm:w-10"
+                        aria-controls="mobile-menu"
+                        aria-expanded={isOpen}
+                    >
+                        {isOpen ? (
+                            <HiOutlineXMark className="h-6 w-6" aria-hidden="true" />
+                        ) : (
+                            <HiBars3 className="h-6 w-6" aria-hidden="true" />
+                        )}
+                        <span className="sr-only">Toggle navigation</span>
+                    </button>
+                )}
             </div>
         </nav>
     );

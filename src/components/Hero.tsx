@@ -1,4 +1,3 @@
-"use client"
 import Image from 'next/image';
 import { heroDetails } from '@/data';
 
@@ -53,7 +52,6 @@ export function Hero() {
                         unoptimized={false}
                         alt="Hero image"
                         draggable={false}
-                        onMouseDown={(e) => e.preventDefault()}
                         style={{ userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none' }}
                         className="mx-auto z-10 w-full max-w-[14rem] sm:max-w-[22rem] md:max-w-[31rem] lg:max-w-[40rem] xl:max-w-[46rem] 2xl:max-w-[52rem] h-auto select-none rounded-lg sm:rounded-xl object-cover"
                     />

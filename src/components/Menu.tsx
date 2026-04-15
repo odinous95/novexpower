@@ -61,7 +61,7 @@ export function Menu({ isOpen, toggleMenu, activeSection, setActiveSection }: Me
     return (
         <>
             {/* Desktop Menu */}
-            <ul className="hidden md:flex fixed items-center text-center top-1/2 right-4 -translate-y-1/2 flex-col space-y-10 p-4">
+            <ul className="fixed right-2 top-1/2 hidden -translate-y-1/2 flex-col items-center space-y-8 p-3 text-center md:flex lg:right-4 lg:space-y-10 lg:p-4">
                 {menuItems && menuItems.map((item) => (
                     <li key={item.text} className="flex items-center justify-between w-full relative">
                         {/* Clickable Circle */}
@@ -107,12 +107,12 @@ export function Menu({ isOpen, toggleMenu, activeSection, setActiveSection }: Me
                     id="mobile-menu"
                     className="md:hidden overflow-hidden border-t border-foreground/10 bg-background/90 supports-[backdrop-filter]:bg-background/70 backdrop-blur-xl shadow-[inset_0_1px_0_rgba(255,255,255,0.30),inset_0_-12px_20px_rgba(0,0,0,0.10),0_14px_28px_rgba(0,0,0,0.14)]"
                 >
-                    <ul className="flex flex-col items-center space-y-4 pt-8 pb-6 px-6">
+                    <ul className="flex flex-col items-stretch space-y-2 px-5 pb-6 pt-6">
                         {menuItems.map(item => (
-                            <li key={item.text} className="border-b border-foreground/20 last:border-b-0">
+                            <li key={item.text} className="border-b border-foreground/20 pb-2 last:border-b-0">
                                 <Link
                                     href={item.url}
-                                    className="block text-base font-medium text-blue-700 dark:text-gray-100 hover:text-blue-500 dark:hover:text-blue-300 transition-colors duration-200"
+                                    className="block rounded-lg px-2 py-2 text-center text-base font-medium text-blue-700 transition-colors duration-200 hover:bg-black/5 hover:text-blue-500 dark:text-gray-100 dark:hover:bg-white/5 dark:hover:text-blue-300"
                                     onClick={(event) => handleMobileNavigation(item.url, event)}
                                 >
                                     {item.text}

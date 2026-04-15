@@ -19,19 +19,19 @@ const Footer: React.FC = () => {
     };
 
     return (
-        <footer className="bg-gradient-to-b from-gray-900 to-black text-white py-16 dark:from-gray-800 dark:to-gray-900">
+        <footer className="bg-gradient-to-b from-gray-900 to-black py-12 text-white dark:from-gray-800 dark:to-gray-900 sm:py-14 lg:py-16">
             {/* Main Content */}
-            <div className="max-w-7xl w-full mx-auto px-6 lg:px-8">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+            <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div className="mb-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:mb-12 lg:grid-cols-4 lg:gap-10 xl:gap-12">
                     {/* Brand Section */}
                     <div className="col-span-1 sm:col-span-2 lg:col-span-1">
                         <span className="flex items-center gap-3 mb-4">
                             <Logo />
-                            <h3 className="manrope text-2xl font-bold cursor-pointer text-white">
+                            <h3 className="manrope cursor-pointer text-xl font-bold text-white sm:text-2xl">
                                 {siteDetails.siteName}
                             </h3>
                         </span>
-                        <p className="text-gray-300 text-sm leading-relaxed">
+                        <p className="text-sm leading-relaxed text-gray-300">
                             {footerDetails.subheading}
                         </p>
                     </div>
@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
                             {footerDetails.email && (
                                 <a
                                     href={`mailto:${footerDetails.email}`}
-                                    className="text-gray-300 hover:text-blue-400 transition duration-300 text-sm flex items-center gap-2"
+                                    className="flex items-center gap-2 break-all text-sm text-gray-300 transition duration-300 hover:text-blue-400"
                                 >
                                     <span>✉</span> {footerDetails.email}
                                 </a>
@@ -121,15 +121,15 @@ const Footer: React.FC = () => {
                 <div className="border-t border-gray-700 my-8"></div>
 
                 {/* Footer Bottom */}
-                <div className="flex flex-col sm:flex-row justify-between items-center gap-6 text-gray-300 text-sm">
-                    <p>
+                <div className="flex flex-col items-center justify-between gap-4 text-center text-sm text-gray-300 sm:flex-row sm:text-left">
+                    <p className="max-w-xl text-balance">
                         Copyright &copy; {new Date().getFullYear()}
                         <span className="font-semibold text-white ml-1">{siteDetails.siteName}</span>.
                         All rights reserved.
                     </p>
-                    <div className="flex gap-6">
-                        <Link href="/privacy" className="hover:text-blue-400 transition duration-300">
-                            Privacy Policy
+                    <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 sm:justify-end">
+                        <Link href="/data-policy" className="hover:text-blue-400 transition duration-300">
+                            Data Policy
                         </Link>
                         <Link href="/terms" className="hover:text-blue-400 transition duration-300">
                             Terms of Service

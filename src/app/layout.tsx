@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { Source_Sans_3, Manrope } from "next/font/google";
 import { Header } from "@/components";
 import { siteDetails } from '@/data';
 import { Providers } from "./provider";
 import "../styles/globals.css";
 import Footer from "@/components/Footer";
+import CookieBanner from "@/components/CookieBanner";
+import AnalyticsConsentScript from "@/components/AnalyticsConsentScript";
 
 const manrope = Manrope({ subsets: ['latin'] });
 const sourceSans = Source_Sans_3({ subsets: ['latin'] });
@@ -44,26 +45,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${manrope.className} ${sourceSans.className} antialiased`}>
-        {siteDetails.googleAnalyticsId && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${siteDetails.googleAnalyticsId}`}
-              strategy="afterInteractive"
-            />
-            <Script id="google-analytics" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${siteDetails.googleAnalyticsId}');
-              `}
-            </Script>
-          </>
-        )}
+        <AnalyticsConsentScript analyticsId={siteDetails.googleAnalyticsId || ""} />
         <Providers>
           <Header />
           <main>{children}</main>
           <Footer />
+          <CookieBanner />
         </Providers>
       </body>
     </html>
