@@ -61,7 +61,7 @@ export function ContactForm({ data, mode = "section", onSuccess }: ContactFormPr
           <h2 className={`text-center font-bold text-black dark:text-white ${isEmbedded ? "mb-2 text-xl sm:text-2xl" : "mb-3 text-2xl sm:text-3xl lg:text-4xl"}`}>
             {title}
           </h2>
-          <p className={`mx-auto text-center font-medium leading-6 text-body-color ${isEmbedded ? "mb-4 max-w-2xl text-xs sm:text-sm" : "mb-8 max-w-3xl text-sm sm:text-base md:mb-10 md:leading-8"}`}>
+          <p className={`mx-auto text-center font-medium leading-6 text-slate-600 dark:text-slate-300 ${isEmbedded ? "mb-4 max-w-2xl text-xs sm:text-sm" : "mb-8 max-w-3xl text-sm sm:text-base md:mb-10 md:leading-8"}`}>
             {description}
           </p>
 
@@ -113,9 +113,9 @@ export function ContactForm({ data, mode = "section", onSuccess }: ContactFormPr
                         [field.name]: value,
                       }));
                     }}
-                    className={`w-full resize-none rounded-2xl border bg-slate-50 px-4 py-3 text-sm text-slate-800 outline-none transition focus:bg-slate-50 dark:border-white/10 dark:bg-white/5 dark:text-white dark:focus:border-emerald-400 dark:focus:bg-white/10 sm:px-5 sm:py-4 sm:text-base ${!state?.success && state?.errors?.message
+                    className={`w-full resize-none rounded-2xl border bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition focus:border-emerald-500 focus:bg-white dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-slate-400 dark:focus:border-emerald-400 dark:focus:bg-white/10 sm:px-5 sm:py-4 sm:text-base ${!state?.success && state?.errors?.message
                       ? "border-red-400 focus:border-red-400 dark:border-red-400 dark:focus:border-red-400"
-                      : "border-slate-200 focus:border-slate-200 sm:focus:border-emerald-500"
+                      : "border-slate-200"
                       }`}
                     disabled={isPending}
                     aria-invalid={Boolean(!state?.success && state?.errors?.message)}
