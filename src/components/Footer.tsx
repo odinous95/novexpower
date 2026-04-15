@@ -27,11 +27,11 @@ const Footer: React.FC = () => {
         <footer className="bg-gradient-to-b from-gray-900 to-black py-12 text-white dark:from-gray-800 dark:to-gray-900 sm:py-14 lg:py-16">
             {/* Main Content */}
             <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="mb-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:mb-12 lg:grid-cols-4 lg:gap-10 xl:gap-12">
+                <div className="mb-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:mb-12 lg:grid-cols-3 lg:gap-10 xl:gap-12">
                     {/* Brand Section */}
                     <div className="col-span-1 sm:col-span-2 lg:col-span-1">
                         <span className="flex items-center gap-3 mb-4">
-                            <Logo />
+                            <Logo variant="dark-bg" />
                             <h3 className="manrope cursor-pointer text-xl font-bold text-white sm:text-2xl">
                                 {siteDetails.siteName}
                             </h3>
@@ -39,25 +39,12 @@ const Footer: React.FC = () => {
                         <p className="text-sm leading-relaxed text-gray-300">
                             {footerDetails.subheading}
                         </p>
-                    </div>
-
-                    {/* Quick Links Section */}
-                    <div>
-                        <h4 className="text-lg font-semibold mb-6 text-white border-b border-gray-500 pb-2">
-                            Quick Links
-                        </h4>
-                        <ul className="space-y-3">
-                            {footerDetails.quickLinks.map(link => (
-                                <li key={link.text}>
-                                    <Link
-                                        href={link.url}
-                                        className="text-gray-300 hover:text-blue-400 transition duration-300 text-sm"
-                                    >
-                                        {link.text}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
+                        <button
+                            onClick={openModal}
+                            className="mt-6 inline-flex items-center gap-2 rounded-full border border-sky-300/40 bg-gradient-to-r from-sky-500 to-cyan-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(14,165,233,0.35)] transition duration-300 hover:-translate-y-0.5 hover:from-sky-400 hover:to-cyan-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300/70"
+                        >
+                            Interested
+                        </button>
                     </div>
 
                     {/* Contact Section */}
@@ -113,15 +100,6 @@ const Footer: React.FC = () => {
                             )}
                         </div>
                     </div>
-                </div>
-
-                <div className="mb-10 flex justify-center">
-                    <button
-                        onClick={openModal}
-                        className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition duration-300"
-                    >
-                        Interested
-                    </button>
                 </div>
 
                 {/* Divider */}
