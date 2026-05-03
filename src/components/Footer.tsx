@@ -14,6 +14,24 @@ const ContactModal = dynamic(
 
 const Footer: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState(false); // State for modal
+    const [showEmail, setShowEmail] = useState(false);
+    const [copied, setCopied] = useState(false);
+
+    const emailParts = footerDetails.email
+        ? footerDetails.email.split("@")
+        : ["", ""];
+
+    const email = `${emailParts[0]}@${emailParts[1]}`;
+
+    const handleCopy = async () => {
+        try {
+            await navigator.clipboard.writeText(email);
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+        } catch (err) {
+            console.error("Copy failed");
+        }
+    };
 
     const openModal = () => {
         setIsModalOpen(true);
@@ -54,21 +72,44 @@ const Footer: React.FC = () => {
                         </h4>
                         <div className="space-y-4">
                             {footerDetails.email && (
-                                <a
-                                    href={`mailto:${footerDetails.email}`}
-                                    className="flex items-center gap-2 break-all text-sm text-gray-300 transition duration-300 hover:text-blue-400"
-                                >
-                                    <span>✉</span> {footerDetails.email}
-                                </a>
+                                <div className="flex items-center gap-3 text-sm text-gray-300">
+                                    <span>✉</span>
+
+                                    {!showEmail ? (
+                                        <button
+                                            onClick={() => setShowEmail(true)}
+                                            className="hover:text-blue-400 transition"
+                                        >
+                                            Show Email
+                                        </button>
+                                    ) : (
+                                        <div className="flex items-center gap-3">
+                                            <a
+                                                href={`mailto:${email}`}
+                                                className="hover:text-blue-400 transition break-all"
+                                            >
+                                                {email}
+                                            </a>
+
+                                            <button
+                                                onClick={handleCopy}
+                                                className="text-xs px-2 py-1 rounded bg-gray-800 hover:bg-gray-700 transition"
+                                            >
+                                                {copied ? "Copied" : "Copy"}
+                                            </button>
+                                        </div>
+                                    )}
+                                </div>
                             )}
                             {footerDetails.telephone && (
                                 <a
                                     href={`tel:${footerDetails.telephone}`}
-                                    className="text-gray-300 hover:text-blue-400 transition duration-300 text-sm flex items-center gap-2"
+                                    className="flex items-center gap-2 break-all text-sm text-gray-300 transition duration-300 hover:text-blue-400"
                                 >
-                                    <span>☎</span> {footerDetails.telephone}
+                                    <span>📞</span> {footerDetails.telephone}
                                 </a>
                             )}
+
                         </div>
                     </div>
 
@@ -106,19 +147,38 @@ const Footer: React.FC = () => {
                 <div className="border-t border-gray-700 my-8"></div>
 
                 {/* Footer Bottom */}
-                <div className="flex flex-col items-center justify-between gap-4 text-center text-sm text-gray-300 sm:flex-row sm:text-left">
-                    <p className="max-w-xl text-balance">
-                        Copyright &copy; {new Date().getFullYear()}
-                        <span className="font-semibold text-white ml-1">{siteDetails.siteName}</span>.
-                        All rights reserved.
-                    </p>
-                    <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 sm:justify-end">
-                        <Link href="/data-policy" className="hover:text-blue-400 transition duration-300">
-                            Data Policy
-                        </Link>
-                        <Link href="/terms" className="hover:text-blue-400 transition duration-300">
-                            Terms of Service
-                        </Link>
+                <div className=" mt-10 pt-6">
+                    <div className="flex flex-col items-center gap-4 text-sm text-gray-400 sm:flex-row sm:justify-between sm:items-center">
+
+                        {/* Left section */}
+                        <p className="text-center sm:text-left max-w-md leading-relaxed">
+                            © {new Date().getFullYear()}
+                            <span className="font-semibold text-white ml-1">
+                                {siteDetails.siteName} AB
+                            </span>. All rights reserved.
+                        </p>
+
+                        {/* Middle section */}
+                        <span className="text-gray-500 text-xs sm:text-sm">
+                            Org.nr 559554-1557
+                        </span>
+
+                        {/* Right section */}
+                        <div className="flex items-center gap-6">
+                            <Link
+                                href="/data-policy"
+                                className="hover:text-blue-400 transition-colors duration-200"
+                            >
+                                Data Policy
+                            </Link>
+                            <Link
+                                href="/terms"
+                                className="hover:text-blue-400 transition-colors duration-200"
+                            >
+                                Terms of Service
+                            </Link>
+                        </div>
+
                     </div>
                 </div>
             </div>
