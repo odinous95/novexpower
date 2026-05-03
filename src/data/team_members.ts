@@ -10,13 +10,13 @@ export const team_members: Iteam_members[] = [
   {
     name: "David Lloyd",
     role: "Battery Engineering & Chemistry",
-    message: `MSc Chemical Engineering. DSc Electrochemistry and energy storage. Worked at NorthVolt, more than two battery startups`,
+    message: `MSc Chemical Engineering. PhD Electrochemistry and energy storage. Worked at NorthVolt, more than two battery startups`,
     avatar: "/images/David.jpeg",
   },
   {
     name: "Matt Davoudi",
     role: "Business & Partnerships",
-    message: `MSc Transport Engineering. PhD Sustainable Urban Mobility (KTH). 7+ years in transport systems and innovation`,
+    message: `MSc Transport Engineering. PhD in transportation science.(KTH). 7+ years in transport systems and innovation`,
     avatar: "/images/Matt.jpg",
   },
 ];
