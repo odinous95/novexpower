@@ -15,9 +15,8 @@ export const footerDetails: {
     },
   ],
   email: "info@novexpower",
-  telephone: "",
+  telephone: "0046764143259",
   socials: {
     linkedin: "https://www.linkedin.com/company/novexpower",
-    email: "mailto:info@novexpower",
   },
 };
