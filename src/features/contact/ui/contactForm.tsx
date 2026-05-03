@@ -128,13 +128,11 @@ export function ContactForm({ data, mode = "section", onSuccess }: ContactFormPr
                 </div>
               ))}
               <PrivacyConsentCheckbox />
-              <div>
-                <SubmitButton
-                  title={submit.label}
-                  aria-disabled={isPending}
-                  pending={isPending}
-                />
-              </div>
+              <SubmitButton
+                title={submit.label}
+                aria-disabled={isPending}
+                pending={isPending}
+              />
             </div>
 
             {state && (

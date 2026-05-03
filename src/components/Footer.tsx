@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { footerDetails, siteDetails } from '@/data';
-import { getPlatformIconByName } from '@/utils';
+import { getPlatformIconByName } from '@/utils/getPlatformIcon';
 import { Logo } from './logo';
 
 const ContactModal = dynamic(
@@ -12,7 +12,7 @@ const ContactModal = dynamic(
     { ssr: false }
 );
 
-const Footer: React.FC = () => {
+export function Footer() {
     const [isModalOpen, setIsModalOpen] = useState(false); // State for modal
     const [showEmail, setShowEmail] = useState(false);
     const [copied, setCopied] = useState(false);
@@ -189,5 +189,4 @@ const Footer: React.FC = () => {
     );
 };
 
-export default Footer;
 

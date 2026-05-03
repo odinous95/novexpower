@@ -17,7 +17,7 @@ function hasAnalyticsConsent(): boolean {
     return window.localStorage.getItem(COOKIE_CONSENT_KEY) === "accepted";
 }
 
-export default function AnalyticsConsentScript({ analyticsId }: Props) {
+export function AnalyticsConsentScript({ analyticsId }: Props) {
     const [allowed, setAllowed] = useState(false);
 
     useEffect(() => {

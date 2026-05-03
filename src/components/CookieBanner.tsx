@@ -20,7 +20,7 @@ function readStoredConsent(): CookieConsent | null {
     return null;
 }
 
-export default function CookieBanner() {
+export function CookieBanner() {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {

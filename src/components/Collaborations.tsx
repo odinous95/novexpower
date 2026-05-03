@@ -1,6 +1,5 @@
 import { collaborators } from '@/data';
 import Image from 'next/image';
-import React from 'react';
 
 
 export function Collaboration() {
