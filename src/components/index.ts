@@ -16,3 +16,4 @@ export * from "./input";
 export * from "./CookieBanner";
 export * from "./AnalyticsConsentScript";
 export { default } from "./ModalWrapper";
+export * from "./EmailReveal";

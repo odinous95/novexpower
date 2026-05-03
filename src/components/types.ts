@@ -10,6 +10,7 @@ export interface IFAQ {
 
 export interface Iteam_members {
   name: string;
+  email?: string;
   role: string;
   message: string;
   avatar: string;

@@ -1,11 +1,13 @@
 "use client"; // Mark this component as a client component
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { footerDetails, siteDetails } from '@/data';
 import { getPlatformIconByName } from '@/utils/getPlatformIcon';
 import { Logo } from './logo';
+import { MdEmail, MdPhone } from 'react-icons/md';
+import { EmailReveal } from '.';
 
 const ContactModal = dynamic(
     () => import('./ContactModal').then((mod) => mod.ContactModal),
@@ -13,7 +15,7 @@ const ContactModal = dynamic(
 );
 
 export function Footer() {
-    const [isModalOpen, setIsModalOpen] = useState(false); 
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const [showEmail, setShowEmail] = useState(false);
     const [copied, setCopied] = useState(false);
 
@@ -72,41 +74,14 @@ export function Footer() {
                         </h4>
                         <div className="space-y-4">
                             {footerDetails.email && (
-                                <div className="flex items-center gap-3 text-sm text-gray-300">
-                                    <span>✉</span>
-
-                                    {!showEmail ? (
-                                        <button
-                                            onClick={() => setShowEmail(true)}
-                                            className="hover:text-blue-400 transition"
-                                        >
-                                            Show Email
-                                        </button>
-                                    ) : (
-                                        <div className="flex items-center gap-3">
-                                            <a
-                                                href={`mailto:${email}`}
-                                                className="hover:text-blue-400 transition break-all"
-                                            >
-                                                {email}
-                                            </a>
-
-                                            <button
-                                                onClick={handleCopy}
-                                                className="text-xs px-2 py-1 rounded bg-gray-800 hover:bg-gray-700 transition"
-                                            >
-                                                {copied ? "Copied" : "Copy"}
-                                            </button>
-                                        </div>
-                                    )}
-                                </div>
+                                <EmailReveal email={footerDetails.email} />
                             )}
                             {footerDetails.telephone && (
                                 <a
                                     href={`tel:${footerDetails.telephone}`}
                                     className="flex items-center gap-2 break-all text-sm text-gray-300 transition duration-300 hover:text-blue-400"
                                 >
-                                    <span>📞</span> {footerDetails.telephone}
+                                    <MdPhone size={30} /> {footerDetails.telephone}
                                 </a>
                             )}
 

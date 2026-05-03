@@ -3,18 +3,22 @@ import { Iteam_members } from "@/components/types";
 export const team_members: Iteam_members[] = [
   {
     name: "Yaman Deif",
+    email: "yaman@novexpower.com",
     role: "Mechatronics & Design",
+
     message: `M.Sc. Engineering Design, Mechatronicsn.\nExpert in robotics, system integration, manufacturing automation.`,
     avatar: "/images/Yaman.png",
   },
   {
     name: "David Lloyd",
+    email: "david@novexpower.com",
     role: "Battery Engineering & Chemistry",
     message: `MSc Chemical Engineering. PhD Electrochemistry and energy storage. Worked at NorthVolt, more than two battery startups`,
     avatar: "/images/David.jpeg",
   },
   {
     name: "Matt Davoudi",
+    email: "matt@novexpower.com",
     role: "Business & Partnerships",
     message: `MSc Transport Engineering. PhD in transportation science.(KTH). 7+ years in transport systems and innovation`,
     avatar: "/images/Matt.jpg",
