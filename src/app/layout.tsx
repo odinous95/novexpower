@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import { Source_Sans_3, Manrope } from "next/font/google";
-import { Header } from "@/components";
+import { AnalyticsConsentScript, CookieBanner, Footer, Header } from "@/components";
 import { siteDetails } from '@/data';
 import { Providers } from "./provider";
 import "../styles/globals.css";
-import Footer from "@/components/Footer";
-import CookieBanner from "@/components/CookieBanner";
-import AnalyticsConsentScript from "@/components/AnalyticsConsentScript";
+
 
 const manrope = Manrope({ subsets: ['latin'] });
 const sourceSans = Source_Sans_3({ subsets: ['latin'] });
