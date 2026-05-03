@@ -42,7 +42,7 @@ export function CookieBanner() {
             <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <p className="text-sm leading-6 text-slate-700">
                     We use cookies and similar technologies to improve website performance and analytics. Read our{" "}
-                    <Link href="/data-policy" className="font-semibold text-sky-700 hover:text-sky-600">
+                    <Link href="/privacy" className="font-semibold text-sky-700 hover:text-sky-600">
                         Data Policy
                     </Link>
                     .
