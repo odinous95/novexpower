@@ -16,25 +16,6 @@ const ContactModal = dynamic(
 
 export function Footer() {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [showEmail, setShowEmail] = useState(false);
-    const [copied, setCopied] = useState(false);
-
-    const emailParts = footerDetails.email
-        ? footerDetails.email.split("@")
-        : ["", ""];
-
-    const email = `${emailParts[0]}@${emailParts[1]}`;
-
-    const handleCopy = async () => {
-        try {
-            await navigator.clipboard.writeText(email);
-            setCopied(true);
-            setTimeout(() => setCopied(false), 2000);
-        } catch (err) {
-            console.error("Copy failed");
-        }
-    };
-
     const openModal = () => {
         setIsModalOpen(true);
     };
@@ -141,7 +122,7 @@ export function Footer() {
                         {/* Right section */}
                         <div className="flex items-center gap-6">
                             <Link
-                                href="/data-policy"
+                                href="/privacy"
                                 className="hover:text-blue-400 transition-colors duration-200"
                             >
                                 Data Policy
