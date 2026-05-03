@@ -67,7 +67,7 @@ export function ContactForm({ data, mode = "section", onSuccess }: ContactFormPr
           <form action={formAction}>
             <div className={isEmbedded ? "space-y-3 sm:space-y-4" : "space-y-4 sm:space-y-5"}>
               {/* Render text inputs */}
-              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-2">
+              <div className="grid grid-cols-1  gap-3  sm:grid-cols-2 lg:grid-cols-2 ">
                 {inputs.map((field, index) => (
                   <div
                     key={field.name}
@@ -112,7 +112,7 @@ export function ContactForm({ data, mode = "section", onSuccess }: ContactFormPr
                         [field.name]: value,
                       }));
                     }}
-                    className={`w-full resize-none rounded-2xl border bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition focus:border-emerald-500 focus:bg-white dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-slate-400 dark:focus:border-emerald-400 dark:focus:bg-white/10 sm:px-5 sm:py-4 sm:text-base ${!state?.success && state?.errors?.message
+                    className={`w-full resize-none rounded-2xl border bg-slate-50 px-4 py-3 my-3 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition focus:border-emerald-500 focus:bg-white dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-slate-400 dark:focus:border-emerald-400 dark:focus:bg-white/10 sm:px-5 sm:py-4 sm:text-base ${!state?.success && state?.errors?.message
                       ? "border-red-400 focus:border-red-400 dark:border-red-400 dark:focus:border-red-400"
                       : "border-slate-200"
                       }`}
