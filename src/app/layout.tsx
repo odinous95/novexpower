@@ -4,6 +4,7 @@ import { AnalyticsConsentScript, CookieBanner, Footer, Header } from "@/componen
 import { siteDetails } from '@/data';
 import { Providers } from "./provider";
 import "../styles/globals.css";
+import { Analytics } from "@vercel/analytics/next"
 
 
 const manrope = Manrope({ subsets: ['latin'] });
@@ -44,6 +45,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${manrope.className} ${sourceSans.className} antialiased`}>
         <AnalyticsConsentScript analyticsId={siteDetails.googleAnalyticsId || ""} />
+        <Analytics />
         <Providers>
           <Header />
           <main>{children}</main>
