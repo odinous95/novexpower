@@ -1,4 +1,3 @@
-
 "use client";
 import { useState } from "react";
 import { MdEmail } from "react-icons/md";
@@ -13,8 +12,8 @@ export function EmailReveal({ email }: Props) {
 
     if (!email) return null;
 
-    const emailParts = email.split("@");
-    const safeEmail = `${emailParts[0]}@${emailParts[1]}`;
+    const [local, domain] = email.split("@");
+    const safeEmail = `${local}@${domain}`;
 
     const handleCopy = async () => {
         try {
@@ -31,22 +30,25 @@ export function EmailReveal({ email }: Props) {
             {!showEmail ? (
                 <button
                     onClick={() => setShowEmail(true)}
-                    className="hover:text-blue-400 transition flex items-center gap-1"
+                    className="flex items-center gap-1 transition text-gray-600 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400"
                 >
-                    <MdEmail size={15} />  Show Email
+                    <MdEmail size={15} />
+                    Show Email
                 </button>
             ) : (
                 <div className="flex items-center gap-3">
                     <a
                         href={`mailto:${safeEmail}`}
-                        className="hover:text-blue-400 transition break-all"
+                        className="break-all transition text-gray-800 hover:text-blue-600 dark:text-gray-200 dark:hover:text-blue-400"
                     >
                         {safeEmail}
                     </a>
 
                     <button
                         onClick={handleCopy}
-                        className="text-xs px-2 py-1 rounded bg-gray-800 hover:bg-gray-700 transition"
+                        className="text-xs px-2 py-1 rounded transition
+              bg-gray-200 hover:bg-gray-300 text-gray-800
+              dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-200"
                     >
                         {copied ? "Copied" : "Copy"}
                     </button>
