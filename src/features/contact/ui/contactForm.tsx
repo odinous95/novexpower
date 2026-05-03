@@ -5,6 +5,7 @@ import { ExclamationCircleIcon } from "@heroicons/react/24/outline";
 import { ContactData } from "../types";
 import { Input, SubmitButton } from "@/components/index";
 import { sendTicket } from "../actions/supportTicket";
+import { PrivacyConsentCheckbox } from "./PrivacyConsentCheckbox";
 
 type ContactFormProps = {
   data: ContactData;
@@ -28,7 +29,6 @@ export function ContactForm({ data, mode = "section", onSuccess }: ContactFormPr
   const [fieldValues, setFieldValues] = useState({
     name: "",
     email: "",
-    company: "",
     message: "",
   });
 
@@ -37,7 +37,6 @@ export function ContactForm({ data, mode = "section", onSuccess }: ContactFormPr
       setFieldValues({
         name: "",
         email: "",
-        company: "",
         message: "",
       });
       onSuccess?.();
@@ -68,7 +67,7 @@ export function ContactForm({ data, mode = "section", onSuccess }: ContactFormPr
           <form action={formAction}>
             <div className={isEmbedded ? "space-y-3 sm:space-y-4" : "space-y-4 sm:space-y-5"}>
               {/* Render text inputs */}
-              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-2">
                 {inputs.map((field, index) => (
                   <div
                     key={field.name}
@@ -80,7 +79,7 @@ export function ContactForm({ data, mode = "section", onSuccess }: ContactFormPr
                       name={field.name}
                       type={field.type}
                       disabled={isPending}
-                      value={fieldValues[field.name as "name" | "email" | "company"] ?? ""}
+                      value={fieldValues[field.name as "name" | "email"] ?? ""}
                       onChange={(event) => {
                         const value = event.target.value;
                         setFieldValues((prev) => ({
@@ -90,7 +89,7 @@ export function ContactForm({ data, mode = "section", onSuccess }: ContactFormPr
                       }}
                       error={
                         !state?.success
-                          ? state?.errors?.[field.name as "name" | "email" | "company"]
+                          ? state?.errors?.[field.name as "name" | "email"]
                           : undefined
                       }
                     />
@@ -128,7 +127,7 @@ export function ContactForm({ data, mode = "section", onSuccess }: ContactFormPr
                   )}
                 </div>
               ))}
-
+              <PrivacyConsentCheckbox />
               <div>
                 <SubmitButton
                   title={submit.label}

@@ -9,7 +9,6 @@ export const defaultContactData: ContactData = {
     inputs: [
       { name: "name", label: "Name", type: "text" },
       { name: "email", label: "Email", type: "email" },
-      { name: "company", label: "Company", type: "text" },
     ],
     checkboxes: [],
     textareas: [{ name: "message", label: "Your Message", rows: 5 }],
