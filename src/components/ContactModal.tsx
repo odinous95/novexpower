@@ -40,17 +40,6 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
                                     We’ll review your message, route it to the right person, and get back to you with a clear next step.
                                 </p>
                             </div>
-
-                            <div className="space-y-3 text-sm text-slate-300">
-                                <div className="rounded-2xl border border-white/10 bg-white/5 p-3.5">
-                                    <p className="font-semibold text-white">Fast response</p>
-                                    <p className="mt-1 leading-6">We aim to respond quickly with practical guidance.</p>
-                                </div>
-                                <div className="rounded-2xl border border-white/10 bg-white/5 p-3.5">
-                                    <p className="font-semibold text-white">Tailored support</p>
-                                    <p className="mt-1 leading-6">Share your project context so we can provide the right solution.</p>
-                                </div>
-                            </div>
                         </div>
                     </aside>
 
