@@ -2,9 +2,6 @@ export type Ticket = {
   name: string;
   email: string;
   message: string;
-  company?: string;
-  phone?: string;
-  services?: string[];
 };
 
 export type SERVICE_METHODS = {
@@ -19,9 +16,6 @@ export type ERRORS = {
   name?: string;
   email?: string;
   message?: string;
-  company?: string;
-  phone?: string;
-  services?: string;
 };
 
 export type InputField = {

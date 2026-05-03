@@ -39,9 +39,6 @@ export function createService(): SERVICE_METHODS {
       const errors: ERRORS = {
         name: flattenedErrors.name?.[0],
         email: flattenedErrors.email?.[0],
-        company: flattenedErrors.company?.[0],
-        phone: flattenedErrors.phone?.[0],
-        services: flattenedErrors.services?.[0],
         message: flattenedErrors.message?.[0],
       };
 
