@@ -1,10 +1,10 @@
 'use client';
-import React from 'react';
+
 import { ThemeToggler, Logo } from '.';
 import { siteDetails } from '@/data';
 import { HiBars3, HiOutlineXMark } from 'react-icons/hi2';
 
-interface NavbarProps {
+type NavbarProps = {
     toggleMenu: () => void;
     isOpen: boolean;
     showSectionMenu: boolean;

@@ -1,13 +1,12 @@
-"use client"; // Mark this component as a client component
-
+"use client";
 import React, { useState } from 'react';
-import { ContactModal } from './ContactModal'; // Import the ContactModal
+import { ContactModal } from './ContactModal';
 
 const ModalWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const [isModalOpen, setIsModalOpen] = useState(false); // State for modal
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const openModal = () => setIsModalOpen(true); // Function to open modal
-    const closeModal = () => setIsModalOpen(false); // Function to close modal
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
 
     return (
         <>
@@ -15,7 +14,7 @@ const ModalWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => 
             <button onClick={openModal} className="bg-blue-600 text-white px-4 py-2 rounded mt-4">
                 Open Contact Form
             </button>
-            <ContactModal isOpen={isModalOpen} onClose={closeModal} /> {/* Modal component */}
+            <ContactModal isOpen={isModalOpen} onClose={closeModal} />
         </>
     );
 };

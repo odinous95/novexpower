@@ -13,7 +13,7 @@ const ContactModal = dynamic(
 );
 
 export function Footer() {
-    const [isModalOpen, setIsModalOpen] = useState(false); // State for modal
+    const [isModalOpen, setIsModalOpen] = useState(false); 
     const [showEmail, setShowEmail] = useState(false);
     const [copied, setCopied] = useState(false);
 
