@@ -23,7 +23,7 @@ export function FAQ() {
                     </p>
                 </div>
 
-                <div className="mt-8 grid grid-cols-1 gap-8 md:gap-10 lg:mt-12 lg:grid-cols-[minmax(0,1.35fr)_minmax(280px,0.85fr)] lg:items-start">
+                <div className="mt-8 gap-8 md:gap-10 lg:mt-12 lg:grid-cols-[minmax(0,1.35fr)_minmax(280px,0.85fr)] lg:items-start">
                     <div className="w-full">
                         {faqs && faqs.map((faq, index) => (
                             <div key={faq.question} className="mb-6 sm:mb-7">
@@ -53,17 +53,6 @@ export function FAQ() {
                             </div>
                         ))}
                     </div>
-
-                    <aside className="w-full max-w-md justify-self-center lg:sticky lg:top-28 lg:justify-self-end">
-                        <Image
-                            src="/images/faq-battery-illustration.svg"
-                            alt="Battery technology illustration"
-                            width={640}
-                            height={420}
-                            sizes="(max-width: 1024px) 100vw, 420px"
-                            className="w-full h-auto rounded-2xl border border-sky-400/20 object-cover shadow-[0_16px_60px_rgba(15,23,42,0.18)]"
-                        />
-                    </aside>
                 </div>
             </div>
         </section>
